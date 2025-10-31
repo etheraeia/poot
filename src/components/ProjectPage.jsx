@@ -5,6 +5,7 @@ export function ProjectPage({
   wide_image,
   left_image,
   right_image,
+  page_layout,
 }) {
   return (
     <div className="flex flex-col flex-grow-0 flex-shrink-0 h-[100%] bg-[#fffbf1] justify-start items-center self-stretch relative gap-12">
@@ -24,27 +25,45 @@ export function ProjectPage({
       <div className="flex flex-col flex-grow-0 flex-shrink-0 overflow-hidden px-8 py-2.5 justify-start items-start self-stretch relative gap-12">
         <p
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className="flex-grow-0 flex-shrink-0 text-3xl font-light tracking-tighter text-left text-[#19255c] self-stretch"
+          className="flex-grow-0 flex-shrink-0 text-3xl font-light tracking-tighter leading-normal text-left text-[#19255c] self-stretch"
         >
           {blurb}
         </p>
-        <img
-          src={wide_image}
-          alt="Wide"
-          className="flex-grow-0 flex-shrink-0 object-cover w-[1392px] h-[371px] self-stretch"
-        />
-        <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-12">
+        { page_layout === "wide" && ( 
           <img
-            src={left_image}
-            alt="Left"
-            className="flex-grow object-cover w-[672px] h-[591px]"
+            src={wide_image}
+            alt="Wide"
+            className="flex-grow-0 flex-shrink-0 object-cover w-[1392px] h-[371px] self-stretch"
           />
-          <img
-            src={right_image}
-            alt="Right"
-            className="flex-grow object-cover w-[672px] h-[591px]"
-          />
-        </div>
+        )}
+        { (page_layout === "halfnhalf" || page_layout === "wide") && (
+          <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-12">
+            <img
+              src={left_image}
+              alt="Left"
+              className="flex-grow object-cover w-[672px] h-[591px]"
+            />
+            <img
+              src={right_image}
+              alt="Right"
+              className="flex-grow object-cover w-[672px] h-[591px]"
+            />
+          </div>
+        )}
+        { (page_layout === "thirds") && (
+          <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-12">
+            <img
+              src={left_image}
+              alt="Left"
+              className="flex-grow object-cover w-2/3 h-[591px]"
+            />
+            <img
+              src={right_image}
+              alt="Right"
+              className="flex-grow object-cover w-1/3 h-[591px]"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

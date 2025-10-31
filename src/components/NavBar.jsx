@@ -36,7 +36,7 @@ export default function NavBar() {
           onMouseLeave={() => setDropdownOpen(false)}
         >
           <button
-            className="flex items-center gap-2 px-4 py-2 text-2xl tracking-tighter font-light text-[#1029b4] bg-transparent hover:bg-[#e6e3d7] rounded transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-2xl tracking-tighter font-light text-[#1029b4] rounded transition-colors"
             style={{ fontFamily: "epilogue, sans-serif" }}
             aria-haspopup="true"
             aria-expanded={dropdownOpen}
@@ -56,13 +56,13 @@ export default function NavBar() {
           </button>
           {dropdownOpen && (
             <div
-              className="absolute right-0 mt-2 w-96 bg-white border border-[#e6e3d7] rounded shadow-lg z-10"
+              className="absolute right-0 mt-2 w-96 bg-#fefbf2 border bg-[#fefbf2] border-[#e6e3d7] rounded shadow-lg z-10"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
               {projects.map((p) => (
                 <Link to= {p.url_name}
-                className="block px-4 py-2 text-xl tracking-tighter font-light text-[#1029b4] hover:bg-[#fefbf2] transition-colors"
+                className="block px-4 py-2 text-xl tracking-tighter font-light text-[#1029b4] hover:bg-white transition-colors"
                 style={{ fontFamily: "epilogue, sans-serif" }}
                 >
                 { p.title }

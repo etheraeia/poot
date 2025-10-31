@@ -34,6 +34,7 @@ export default function App() {
                 wide_image={p.wide_image}
                 left_image={p.left_image}
                 right_image={p.right_image}
+                page_layout={p.page_layout}
               />
             }/>
           ))}

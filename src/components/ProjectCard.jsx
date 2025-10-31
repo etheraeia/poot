@@ -36,7 +36,7 @@ export function ProjectCard({
 
   // Text content component with dynamic alignment
   const TextComponent = ({ textAlign, justifyItems = "start" }) => (
-    <Link
+    <div
     to={url_name}
     className={`flex flex-col flex-grow-0 flex-shrink-0 overflow-hidden w-1/3 pt-[120px] justify-start items-${justifyItems} self-stretch relative gap-2.5`}>
       <svg
@@ -58,25 +58,27 @@ export function ProjectCard({
         />
       </svg>
       <div className="flex flex-col flex-grow-0 flex-shrink-0 overflow-hidden px-[15px] justify-center items-center self-stretch relative">
-        <p
-          style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-4xl font-light tracking-tighter text-${textAlign} text-[#19255c] self-stretch`}
-        >
-          <span className="font-light tracking-tighter">
-            {index}: {title}
-            {subtitle && "-"}
-          </span>
-          {subtitle && (
-            <>
-              <br />
-              <span className="font-light tracking-tighter">
-                {subtitle}
-              </span>
-            </>
-          )}
-        </p>
+        <Link to={url_name}>
+          <p
+            style={{ fontFamily: "epilogue, sans-serif" }}
+            className={`flex-grow-0 flex-shrink-0 text-4xl font-light tracking-tighter text-${textAlign} text-[#19255c] self-stretch`}
+          >
+            <span className="font-light tracking-tighter">
+              {index}: {title}
+              {subtitle && "-"}
+            </span>
+            {subtitle && (
+              <>
+                <br />
+                <span className="font-light tracking-tighter">
+                  {subtitle}
+                </span>
+              </>
+            )}
+          </p>
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 
   // Layout switch based on the 4 distinct cases from your hardcoded source
