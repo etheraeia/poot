@@ -6,34 +6,40 @@ export function ProjectPage({
   left_image,
   right_image,
   page_layout,
+  intro_text_color,
+  body_text_color,
+  background_color
 }) {
   return (
-    <div className="flex flex-col flex-grow-0 flex-shrink-0 h-[100%] bg-[#fffbf1] justify-start items-center self-stretch relative gap-12">
+    <div className={`flex flex-col flex-grow-0 flex-shrink-0 h-[100%] justify-start bg-[${background_color}] items-center self-stretch relative`}>
       <img
         src={hero_image}
         alt="Hero"
-        className="flex-grow-0 flex-shrink-0 object-cover w-[100vw] h-3/4 absolute left-0 top-0 self-stretch"
+        className="flex-grow-0 flex-shrink-0 object-cover w-[100vw] h-5/6 absolute left-0 top-0 self-stretch"
       />
-      <div className="flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] h-3/4 px-8 bg-gradient-to-b from-white/0 to-[#fffbf1] justify-end items-end self-stretch relative">
+      <div className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] h-5/6 px-96 bg-gradient-to-b from-white/0 to-[${background_color}] justify-end items-end self-stretch relative`}>
           <p
             style={{ fontFamily: "ivypresto-display, serif" }}
-            className="flex-grow-0 flex-shrink-0 text-8xl font-thin text-left text-[#0c2fd8] self-stretch"
+            className={`flex-grow-0 flex-shrink-0 text-7xl font-thin text-left text-[${intro_text_color}] self-stretch`}
           >
             {intro_text}
           </p>
-        </div>
-      <div className="flex flex-col flex-grow-0 flex-shrink-0 overflow-hidden px-8 py-2.5 justify-start items-start self-stretch relative gap-12">
+      </div>
+      <div className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] px-96 bg-[${background_color}] justify-end items-end self-stretch relative`}>
         <p
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className="flex-grow-0 flex-shrink-0 text-3xl font-light tracking-tighter leading-normal text-left text-[#19255c] self-stretch"
+          className={`flex-grow-0 flex-shrink-0 text-2xl font-light tracking-tighter leading-normal text-left text-[${body_text_color}] self-stretch`}
         >
           {blurb}
         </p>
+      </div>
+      <div className={`flex flex-col flex-grow-0 flex-shrink-0 overflow-hidden bg-[${background_color}] px-8 py-2.5 justify-start items-start self-stretch relative gap-12`}>
+        <p />
         { page_layout === "wide" && ( 
           <img
             src={wide_image}
             alt="Wide"
-            className="flex-grow-0 flex-shrink-0 object-cover w-[1392px] h-[371px] self-stretch"
+            className="flex-grow-0 flex-shrink-0 object-cover w-[100%] h-[calc(100vw/3*(1/277))] self-stretch"
           />
         )}
         { (page_layout === "halfnhalf" || page_layout === "wide") && (
@@ -41,12 +47,12 @@ export function ProjectPage({
             <img
               src={left_image}
               alt="Left"
-              className="flex-grow object-cover w-[672px] h-[591px]"
+              className="flex-grow object-cover w-1/2 h-[591px]"
             />
             <img
               src={right_image}
               alt="Right"
-              className="flex-grow object-cover w-[672px] h-[591px]"
+              className="flex-grow object-cover w-1/2 h-[591px]"
             />
           </div>
         )}

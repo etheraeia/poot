@@ -9,12 +9,13 @@ export const projects = [
         url_name: "/cradlelist",
         intro_text: "Cradlelist is a marketplace for teen and first-time parents.",
         blurb: "Strollers, toys, books — you want the best for your kids, but that can get really expensive. Cradlelist provides a streamlined, user-friendly platform for buying and selling supplies for children at affordable prices. You can also find classes or activities near you, in case you want to brush up on childcare skills, take your child to an educational experience, or meet other parents and their families.",
-        hero_image: "test_bkg.png",
-        hero_height_modifier: "241/300",
-        wide_image: "Cradlelist_wide.png",
+        hero_image: "Cradlelist_hero.png",
         left_image: "Cradlelist_left.png",
         right_image: "Cradlelist_right.png",
-        page_layout: "wide"
+        page_layout: "thirds",
+        intro_text_color: "##0c2fd8",
+        body_text_color: "#19255c",
+        background_color: "#fffbf1"
     },
     {
         index: "02",
@@ -30,7 +31,10 @@ export const projects = [
         wide_image: "Exoterminal_wide.png",
         left_image: "Exoterminal.png",
         right_image: "Exoterminal.png",
-        page_layout: "thirds"
+        page_layout: "thirds",
+        intro_text_color: "#E2E7FE",
+        body_text_color: "#E2E7FE",
+        background_color: "#000000",
     },
     {
         index: "03",
@@ -42,10 +46,14 @@ export const projects = [
         url_name: "/rotun",
         intro_text: "Rotun is an exploration into modular blackletter.",
         blurb: "Designed for illegibility, Rotun was created for a conceptual prototype of a video game called Glyphdive, which explores the fine line between comprehensible and incomprehensible that type can walk.",
-        hero_image: "Rotun_hero.png",
+        hero_image: "test_bkg.png",
         wide_image: "Rotun_wide.png",
         left_image: "Rotun_left.png",
         right_image: "Rotun_right.png",
+        page_layout: "wide",
+        intro_text_color: "#E2E7FE",
+        body_text_color: "#E2E7FE",
+        background_color: "#000000",
     },
     {
         index: "04",
