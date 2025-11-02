@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { TransitionLink } from "./TransitionLink";
 
 // ProjectCard.jsx
 export function ProjectCard({
@@ -12,7 +12,7 @@ export function ProjectCard({
 }) {
   // Image component
   const MediaComponent = () => (
-    <Link
+    <TransitionLink
       to={url_name}
       className={`flex-grow-0 flex-shrink-0 overflow-hidden w-1/3 h-[calc(100vw/3*(${height_modifer}))] object-cover rounded-lg relative`}
     >
@@ -31,7 +31,7 @@ export function ProjectCard({
           className="w-full h-full object-cover"
         />
       )}
-    </Link>
+    </TransitionLink>
   );
 
   // Text content component with dynamic alignment
@@ -58,7 +58,7 @@ export function ProjectCard({
         />
       </svg>
       <div className="flex flex-col flex-grow-0 flex-shrink-0 overflow-hidden px-[15px] justify-center items-center self-stretch relative">
-        <Link to={url_name}>
+        <TransitionLink to={url_name}>
           <p
             style={{ fontFamily: "epilogue, sans-serif" }}
             className={`flex-grow-0 flex-shrink-0 text-4xl font-light tracking-tighter text-${textAlign} text-[#19255c] self-stretch`}
@@ -76,7 +76,7 @@ export function ProjectCard({
               </>
             )}
           </p>
-        </Link>
+        </TransitionLink>
       </div>
     </div>
   );
