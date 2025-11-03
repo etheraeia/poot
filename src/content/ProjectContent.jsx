@@ -50,6 +50,8 @@ export const projects = [
         wide_image: "Rotun_wide.png",
         left_image: "Rotun_left.png",
         right_image: "Rotun_right.png",
+        caption: "Rotun includes both cases A-Z, numerals, and punctuation.",
+        elaboration: "Rotun was created for a conceptual prototype of a video game called Glyphdive, which explores the fine line between comprehensible and incomprehensible that type can walk. The process embraced modular construction to keep letterforms consistent.",
         page_layout: "wide",
         intro_text_color: "#E2E7FE",
         body_text_color: "#E2E7FE",

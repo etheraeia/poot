@@ -49,7 +49,9 @@ export function ProjectPage({
   page_layout,
   intro_text_color,
   body_text_color,
-  background_color
+  background_color,
+  caption,
+  elaboration,
 }) {
   return (
     <div className={`flex flex-col flex-grow-0 flex-shrink-0 h-[100%] justify-start bg-[${background_color}] items-center self-stretch relative`}>
@@ -84,19 +86,27 @@ export function ProjectPage({
           style={{ fontFamily: "epilogue, sans-serif" }}
           className={`flex-grow-0 flex-shrink-0 text-xl font-extralight tracking-tighter leading-normal text-center text-[${body_text_color}] self-stretch`}
         >
-          poot.
+          {caption}
         </p>
         { (page_layout === "halfnhalf" || page_layout === "wide") && <ImageHalfNHalf left_image={left_image} right_image={right_image} /> }
         { (page_layout === "thirds") && <ImageThirds left_image={left_image} right_image={right_image} /> }
         {/* SLIDE 3: Process and Justifications */}
+        
+        <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-12">
+        <img
+          src={left_image}
+          alt="Left"
+          className="flex-grow object-cover w-1/2"
+        />
         <p
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-2xl font-extralight tracking-tighter leading-normal text-left text-[${body_text_color}] self-stretch`}
+          className={`flex-grow-0 flex-shrink-0 text-2xl w-1/2 font-extralight tracking-tighter leading-normal text-left text-[${body_text_color}] self-stretch`}
         >
-          {blurb}
+          {elaboration}
         </p>
-        <ImageHalfNHalf left_image={left_image} right_image={right_image} />
-        <ImageThirds left_image={left_image} right_image={right_image} />
+        </div>
+        {/* <ImageHalfNHalf left_image={left_image} right_image={right_image} />
+        <ImageThirds left_image={left_image} right_image={right_image} /> */}
       </div>
     </div>
   );
