@@ -3,8 +3,12 @@ import { HeroSection } from "../components/HeroSection";
 import { CurrentProject } from "../components/CurrentProject";
 import { ProjectCard } from "../components/ProjectCard";
 import { projects } from "../content/ProjectContent";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    document.body.className = "bg-[#fffbf1]";
+  }, []);
   return (
     <div className="scroll-container">
       <HeroSection

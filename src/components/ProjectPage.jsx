@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 function ImageHalfNHalf({
   left_image,
@@ -53,6 +54,9 @@ export function ProjectPage({
   caption,
   elaboration,
 }) {
+  useEffect(() => {
+    document.body.className = background_color;
+  }, [background_color]);
   return (
     <div className={`flex flex-col flex-grow-0 flex-shrink-0 h-[100%] justify-start items-center self-stretch relative`}>
       {/* SLIDE 1: Hero Image, Intro Text, Blurb */}

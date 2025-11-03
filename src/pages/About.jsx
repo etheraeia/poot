@@ -1,9 +1,12 @@
-import { ProjectPage } from "../components/ProjectPage";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+    document.body.className = "bg-[#fffbf1]";
+  }, []);
   return (
     <div
-      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 h-100% pt-32"
+      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 h-100% pt-16"
     >
       <div
         class="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[100%] relative overflow-hidden gap-12 pt-6 px-8"

@@ -15,7 +15,8 @@ export const projects = [
         page_layout: "thirds",
         intro_text_color: "text-[#0c2fd8]",
         body_text_color: "text-[#19255c]",
-        background_color: "bg-[#fffbf1]"
+        background_color: "bg-[#fffbf1]",
+        logo_color: "fill-[#0c2fd8]",
     },
     {
         index: "02",
@@ -35,6 +36,7 @@ export const projects = [
         intro_text_color: "text-[#E2E7FE]",
         body_text_color: "text-[#E2E7FE]",
         background_color: "bg-[#000000]",
+        logo_color: "fill-[#E2E7FE]",
     },
     {
         index: "03",
@@ -56,6 +58,7 @@ export const projects = [
         intro_text_color: "text-[#E2E7FE]",
         body_text_color: "text-[#E2E7FE]",
         background_color: "bg-[#000000]",
+        logo_color: "fill-[#E2E7FE]",
     },
     {
         index: "04",
