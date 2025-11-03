@@ -46,7 +46,7 @@ export const projects = [
         url_name: "/rotun",
         intro_text: "Rotun is an exploration into modular blackletter.",
         blurb: "Designed for illegibility, Rotun was created for a conceptual prototype of a video game called Glyphdive, which explores the fine line between comprehensible and incomprehensible that type can walk.",
-        hero_image: "test_bkg.png",
+        hero_image: "Rotun_hero.gif",
         wide_image: "Rotun_wide.png",
         left_image: "Rotun_left.png",
         right_image: "Rotun_right.png",

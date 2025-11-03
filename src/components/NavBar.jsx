@@ -52,7 +52,7 @@ export default function NavBar() {
           </button>
           {dropdownOpen && (
             <div
-              className="absolute right-2 mt-0 w-90 bg-#fefbf2 bg-[#fefbf2] border-[#e6e3d7] z-10"
+              className="absolute right-2 mt-0 w-90 bg-[#fefbf2] border-[#e6e3d7] z-10"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >

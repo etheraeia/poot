@@ -37,6 +37,9 @@ export default function App() {
                     left_image={p.left_image}
                     right_image={p.right_image}
                     page_layout={p.page_layout}
+                    intro_text_color={p.intro_text_color}
+                    body_text_color={p.body_text_color}
+                    background_color={p.background_color}
                   />
                 }
               />
