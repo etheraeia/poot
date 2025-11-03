@@ -23,7 +23,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-1">
           {projects.map((p) => (
-            <ProjectCard key={p.index} {...p} />
+            <ProjectCard {...p} />
           ))}
         </div>
       </div>

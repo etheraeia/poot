@@ -54,23 +54,23 @@ export function ProjectPage({
   elaboration,
 }) {
   return (
-    <div className={`flex flex-col flex-grow-0 flex-shrink-0 h-[100%] justify-start bg-[${background_color}] items-center self-stretch relative`}>
+    <div className={`flex flex-col flex-grow-0 flex-shrink-0 h-[100%] justify-start items-center self-stretch relative`}>
       {/* SLIDE 1: Hero Image, Intro Text, Blurb */}
       <img
         src={hero_image}
         alt="Hero"
         className="flex-grow-0 flex-shrink-0 object-cover w-[100vw] h-2/3 self-stretch"
       />
-      <div className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] bg-[${background_color}] gap-6 justify-end items-end self-stretch relative`}>
+      <div className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}>
         <p
           style={{ fontFamily: "ivypresto-display, serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-7xl font-thin text-left text-[${intro_text_color}] self-stretch`}
+          className={`flex-grow-0 flex-shrink-0 text-7xl font-thin text-left self-stretch ${intro_text_color}`}
         >
           {intro_text}
         </p>
         <p
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-2xl font-extralight tracking-tighter leading-normal text-left text-[${body_text_color}] self-stretch`}
+          className={`flex-grow-0 flex-shrink-0 text-2xl font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
         >
           {blurb}
         </p>
@@ -84,7 +84,7 @@ export function ProjectPage({
         )}
         <p
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-xl font-extralight tracking-tighter leading-normal text-center text-[${body_text_color}] self-stretch`}
+          className={`flex-grow-0 flex-shrink-0 text-xl font-extralight tracking-tighter leading-normal text-center ${body_text_color} self-stretch`}
         >
           {caption}
         </p>
@@ -100,7 +100,7 @@ export function ProjectPage({
         />
         <p
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-2xl w-1/2 font-extralight tracking-tighter leading-normal text-left text-[${body_text_color}] self-stretch`}
+          className={`flex-grow-0 flex-shrink-0 text-2xl w-1/2 font-extralight tracking-tighter leading-normal text-left ${body_text_color} self-stretch`}
         >
           {elaboration}
         </p>

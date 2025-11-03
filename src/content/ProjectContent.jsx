@@ -13,9 +13,9 @@ export const projects = [
         left_image: "Cradlelist_left.png",
         right_image: "Cradlelist_right.png",
         page_layout: "thirds",
-        intro_text_color: "##0c2fd8",
-        body_text_color: "#19255c",
-        background_color: "#fffbf1"
+        intro_text_color: "text-[#0c2fd8]",
+        body_text_color: "text-[#19255c]",
+        background_color: "bg-[#fffbf1]"
     },
     {
         index: "02",
@@ -32,9 +32,9 @@ export const projects = [
         left_image: "Exoterminal.png",
         right_image: "Exoterminal.png",
         page_layout: "thirds",
-        intro_text_color: "#E2E7FE",
-        body_text_color: "#E2E7FE",
-        background_color: "#000000",
+        intro_text_color: "text-[#E2E7FE]",
+        body_text_color: "text-[#E2E7FE]",
+        background_color: "bg-[#000000]",
     },
     {
         index: "03",
@@ -53,9 +53,9 @@ export const projects = [
         caption: "Rotun includes both cases A-Z, numerals, and punctuation.",
         elaboration: "Rotun was created for a conceptual prototype of a video game called Glyphdive, which explores the fine line between comprehensible and incomprehensible that type can walk. The process embraced modular construction to keep letterforms consistent.",
         page_layout: "wide",
-        intro_text_color: "#E2E7FE",
-        body_text_color: "#E2E7FE",
-        background_color: "#000000",
+        intro_text_color: "text-[#E2E7FE]",
+        body_text_color: "text-[#E2E7FE]",
+        background_color: "bg-[#000000]",
     },
     {
         index: "04",

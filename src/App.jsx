@@ -29,9 +29,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             {projects.map((p) => (
               <Route path={p.url_name} element={
-                  <ProjectPage
-                    {...p}
-                  />
+                  <ProjectPage {...p} />
                 }
               />
             ))}
