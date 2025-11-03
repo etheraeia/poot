@@ -3,7 +3,7 @@ import { ProjectPage } from "../components/ProjectPage";
 export default function About() {
   return (
     <div
-      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 h-100%"
+      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 h-100% pt-32"
     >
       <div
         class="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[100%] relative overflow-hidden gap-12 pt-6 px-8"
@@ -45,12 +45,10 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div class="flex justify-end items-end self-stretch relative gap-2.5 p-2.5">
-        <img
-          src="trenchcoat-cats.png"
-          class="absolute bottom-0 right-0 flex-grow-0 flex-shrink-0 w-1/10 h-[calc(100vw/10*(277/198))] object-cover"
-        />
-      </div>
+      <img
+        src="trenchcoat-cats.png"
+        class="absolute bottom-0 right-0 flex-grow-0 flex-shrink-0 w-1/10 h-[calc(100vw/10*(277/198))] object-cover"
+      />
     </div>
   );
 }
