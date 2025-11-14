@@ -4,7 +4,7 @@ import { TransitionLink } from "./TransitionLink";
 
 function ImageHalfNHalf({ left_image, right_image }) {
   return (
-    <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-12">
+    <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-6">
       <img
         src={left_image}
         alt="Left"
@@ -21,16 +21,16 @@ function ImageHalfNHalf({ left_image, right_image }) {
 
 function ImageThirds({ left_image, right_image }) {
   return (
-    <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-12">
+    <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-6">
       <img
         src={left_image}
         alt="Left"
-        className="flex-grow object-cover w-2/3"
+        className="flex-grow object-cover w-1/3"
       />
       <img
         src={right_image}
         alt="Right"
-        className="flex-grow object-cover w-1/3"
+        className="flex-grow object-cover w-2/3"
       />
     </div>
   );
@@ -78,6 +78,8 @@ export function ProjectPage({
   background_color,
   caption,
   elaboration,
+  process_left_image,
+  process_right_image,
 }) {
   useEffect(() => {
     document.body.className = background_color;
@@ -131,18 +133,18 @@ export function ProjectPage({
             className="flex-grow-0 flex-shrink-0 object-cover w-[100%] h-[calc(100vh/] self-stretch"
           />
         )}
-        <p
-          style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-lg font-extralight tracking-tighter leading-normal text-center ${body_text_color} self-stretch`}
-        >
-          {caption}
-        </p>
         {page_layout === "halfnhalf" && (
           <ImageHalfNHalf left_image={left_image} right_image={right_image} />
         )}
         {page_layout === "thirds" && (
           <ImageThirds left_image={left_image} right_image={right_image} />
         )}
+        <p
+          style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
+          className={`flex-grow-0 flex-shrink-0 text-lg font-extralight tracking-tighter leading-normal text-center ${body_text_color} self-stretch`}
+        >
+          {caption}
+        </p>
       </div>
       <div
         className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
@@ -150,12 +152,12 @@ export function ProjectPage({
         {/* SLIDE 3: Process and Justifications */}
         <div className="flex overflow-hidden justify-start items-start self-stretch relative gap-6">
           <img
-            src={left_image}
+            src={process_left_image}
             alt="Left"
             className="flex-grow object-cover w-1/2"
           />
           <img
-            src={right_image}
+            src={process_right_image}
             alt="Right"
             className="flex-grow object-cover w-1/2"
           />
