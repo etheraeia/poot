@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { usePageTransition } from "./TransitionProvider";
 
-export function TransitionLink({ to, children, className, style }) {
+export function TransitionLink({ to, children, className, style, direction}) {
     const { transitionTo } = usePageTransition();
     return (
         <Link
@@ -9,7 +9,7 @@ export function TransitionLink({ to, children, className, style }) {
             onClick={(e) => {
                 if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
                 e.preventDefault();
-                transitionTo(to);
+                transitionTo(to, direction);
             }}
             className={className}
             style={style}

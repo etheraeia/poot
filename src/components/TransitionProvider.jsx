@@ -1,10 +1,10 @@
-import { createContext, useCallback, useContext, useMemo, useRef } from "react";
+import { createContext, useCallback, useContext, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { animate } from "animejs";
 
 // Context to expose the transition navigation function
 const TransitionContext = createContext({
-  transitionTo: (_path) => {},
+  transitionTo: () => {},
 });
 
 export function usePageTransition() {
@@ -15,9 +15,11 @@ export default function TransitionProvider({ children }) {
   const navigate = useNavigate();
   const barRef = useRef(null);
   const animatingRef = useRef(false);
+  const [currentDirection, setCurrentDirection] = useState("right");
 
   const transitionTo = useCallback(
-    (path) => {
+    (path, direction) => {
+      setCurrentDirection(direction === "left" ? "left" : "right");
       if (!barRef.current || animatingRef.current) {
         // If overlay isn't ready or an animation is in progress, fall back to immediate nav
         navigate(path);
@@ -26,27 +28,42 @@ export default function TransitionProvider({ children }) {
 
       const element = barRef.current;
       animatingRef.current = true;
+      var startX = "-100vw";
+      var  midX = "0vw";
+      var  endX = "100vw";
+
+      if (direction == "right") {
+        startX = "-100vw";
+        midX = "0vw";
+        endX = "100vw";
+      }
+
+      if (direction == "left") {
+        startX = "100vw";
+        midX = "0vw";
+        endX = "-100vw";
+      }
 
       // Reset to starting state
-      element.style.transformOrigin = "left center";
-      element.style.transform = "scaleX(0)";
-
+      element.style.transform = `translateX(${startX})`;
       // Cover the screen (wipe-in)
       animate(element, {
-        duration: 350,
-        ease: "inOutQuad",
-        scaleX: { from: 0, to: 1 },
+        duration: 750,
+        ease: "inQuad",
+        scaleX: 1.5,
+        scaleY: 1.5,
+        translateX: [startX, midX],
         onComplete: () => {
           // Navigate only AFTER the screen is fully covered
           navigate(path);
-
           // Next frame, reveal from the right (wipe-out)
           requestAnimationFrame(() => {
-            element.style.transformOrigin = "right center";
             animate(element, {
-              duration: 350,
-              ease: "inOutQuad",
-              scaleX: { from: 1, to: 0 },
+              duration: 750,
+              ease: "outQuad",
+              scaleX: 1,
+              scaleY: 1,
+              translateX: [midX, endX],
               onComplete: () => {
                 animatingRef.current = false;
               },
@@ -67,9 +84,15 @@ export default function TransitionProvider({ children }) {
       <div aria-hidden className="pointer-events-none fixed inset-0 z-[999]">
         <div
           ref={barRef}
-          className="absolute inset-0 bg-[#1029b4] will-change-transform"
+          className="rounded-full absolute inset-0 bg-[#1029b4] will-change-transform flex justify-center items-center"
           style={{ transform: "scaleX(0)" }}
-        />
+        >
+          <img
+            src={`${currentDirection === "right" ? "cat_light_R.png" : "cat_light_L.png"}`}
+            alt="Kitty"
+            className="object-cover h-48"
+          />
+        </div>
       </div>
     </TransitionContext.Provider>
   );

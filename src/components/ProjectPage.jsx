@@ -8,12 +8,12 @@ function ImageHalfNHalf({ left_image, right_image }) {
       <img
         src={left_image}
         alt="Left"
-        className="flex-grow object-cover w-1/2"
+        className="flex-grow object-cover rounded-md w-1/2"
       />
       <img
         src={right_image}
         alt="Right"
-        className="flex-grow object-cover w-1/2"
+        className="flex-grow object-cover rounded-md w-1/2"
       />
     </div>
   );
@@ -25,12 +25,12 @@ function ImageThirds({ left_image, right_image }) {
       <img
         src={left_image}
         alt="Left"
-        className="flex-grow object-cover w-1/3"
+        className="flex-grow object-cover rounded-md w-1/3"
       />
       <img
         src={right_image}
         alt="Right"
-        className="flex-grow object-cover w-2/3"
+        className="flex-grow object-cover rounded-md w-2/3"
       />
     </div>
   );
@@ -40,11 +40,11 @@ function ProjectNavigationCard({ project, body_text_color, type }) {
   const alignment = type === "Previous" ? "text-left" : "text-right";
   const flexDirection = type === "Previous" ? "flex-row" : "flex-row-reverse";
   return (
-    <TransitionLink to={project.url_name} className={`flex ${flexDirection} gap-2`}>
+    <TransitionLink to={project.url_name} direction={type === "Previous" ? "left" : "right"} className={`flex ${flexDirection} gap-2`}>
       <img
         src={project.hero_image}
         alt={`${type} Project Hero`}
-        className="object-cover w-32"
+        className="object-cover rounded-sm w-32"
       />
       <div className="flex flex-col justify-end">
         <p
@@ -90,9 +90,15 @@ export function ProjectPage({
   const prevProject = projects.find(
     (p) => p.index === (parseInt(index) - 1).toString().padStart(2, "0"),
   );
-  const homeProject = {
+  const homeProjectPrev = {
     url_name: "/",
-    hero_image: "arrow.png",
+    hero_image: "fish_arrow_L.png",
+    title: "Home",
+    index: "",
+  };
+  const homeProjectNext = {
+    url_name: "/",
+    hero_image: "fish_arrow_R.png",
     title: "Home",
     index: "",
   };
@@ -126,11 +132,10 @@ export function ProjectPage({
         className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-2 justify-end items-end self-stretch relative`}
       >
         {/* SLIDE 2: Glamour */}
-        <p />
         {page_layout === "wide" && (
           <img
             src={wide_image}
-            className="flex-grow-0 flex-shrink-0 object-cover w-[100%] h-[calc(100vh/] self-stretch"
+            className="flex-grow-0 flex-shrink-0 object-cover rounded-md w-[100%] h-[calc(100vh/] self-stretch"
           />
         )}
         {page_layout === "halfnhalf" && (
@@ -154,12 +159,12 @@ export function ProjectPage({
           <img
             src={process_left_image}
             alt="Left"
-            className="flex-grow object-cover w-1/2"
+            className="flex-grow object-cover rounded-md w-1/2"
           />
           <img
             src={process_right_image}
             alt="Right"
-            className="flex-grow object-cover w-1/2"
+            className="flex-grow object-cover rounded-md w-1/2"
           />
         </div>
         <p
@@ -176,13 +181,13 @@ export function ProjectPage({
         { prevProject ? (
           <ProjectNavigationCard project={prevProject} body_text_color={body_text_color} type="Previous" />
         ) : (
-          <ProjectNavigationCard project={homeProject} body_text_color={body_text_color} type="Previous" />
+          <ProjectNavigationCard project={homeProjectPrev} body_text_color={body_text_color} type="Previous" />
         )}
         { nextProject ? (
           <ProjectNavigationCard project={nextProject} body_text_color={body_text_color} type="Next" />
         ) :
         (
-          <ProjectNavigationCard project={homeProject} body_text_color={body_text_color} type="Previous" />
+          <ProjectNavigationCard project={homeProjectNext} body_text_color={body_text_color} type="Next" />
         )}
       </div>
     </div>
