@@ -76,7 +76,7 @@ export default function NavBar() {
           aria-haspopup="true"
           aria-expanded={dropdownOpen}
           onMouseEnter={() => setDropdownOpen(true)}
-          className="transition-colors underline"
+          className="transition-colors hover:underline"
         >
           WORK
         </p>

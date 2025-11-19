@@ -4,6 +4,7 @@ import { CurrentProject } from "../components/CurrentProject";
 import { ProjectCard } from "../components/ProjectCard";
 import { projects } from "../content/ProjectContent";
 import { useEffect } from "react";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function Home() {
   useEffect(() => {
@@ -17,18 +18,7 @@ export default function Home() {
         tagline="is two cats in a trenchcoat designing humanity a whiskered, fish-eating future."
         arrowSrc="arrow_curve_R.png"
       />
-      {/* <button
-        className={`${window.scrollY > 1200 ? "opacity-100" : "opacity-0"} transition-all duration-200 z-999 p-6 fixed bottom-10 left-10 bg-[#1029b4] rounded-full cursor-pointer`}
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        <img
-          src="arrow_straight_up.png"
-          alt="Top"
-          loading="lazy"
-          decoding="async"
-          className="block object-contain w-16 h-16"
-        />
-      </button> */}
+      <ScrollToTopButton />
       <div className="flex flex-col px-2.5 pb-[120px] bg-[#fffbf1]">
         <CurrentProject
           title="The Greenback Club"
