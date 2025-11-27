@@ -11,9 +11,10 @@ export default function About() {
       <div
         class="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[100%] relative overflow-hidden gap-12 pt-6 px-8"
       >
-        <div
-          class="flex-grow-0 flex-shrink-0 w-1/3 h-[calc(100vw/3*(600/470))] relative overflow-hidden rounded-lg bg-[url(Headshot.jpg)] bg-cover bg-no-repeat bg-center"
-        ></div>
+        <img
+          class="flex-grow-0 flex-shrink-0 w-1/3 h-[calc(100vw/3*(600/470))] relative overflow-hidden rounded-lg"
+          src="Headshot.jpg"
+        />
         <div class="flex flex-col justify-between items-start flex-grow overflow-hidden">
           <div
             class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative overflow-hidden gap-5"
