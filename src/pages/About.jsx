@@ -6,7 +6,7 @@ export default function About() {
   }, []);
   return (
     <div
-      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 h-100% pt-16"
+      class="flex flex-col justify-center items-start self-stretch flex-grow-0 flex-shrink-0 h-100% py-16"
     >
       <div
         class="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[100%] relative overflow-hidden gap-12 pt-6 px-8"

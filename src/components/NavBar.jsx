@@ -30,7 +30,8 @@ export default function NavBar() {
     "text-[#1029b4]";
   const navLogoColor = currentProject?.logo_color || "fill-[#1029b4]";
   const navBgColor = currentProject?.background_color || "bg-[#fefbf2] fill-[#fefbf2]";
-
+  const dropdownTextColor = currentProject?.drop_text_color || "text-[#fefbf2]";
+  const dropdownBgColor = currentProject?.drop_bg_color || "bg-[#1029b4] fill-[#1029b4]";
   return (
     <header
       className={`flex flex-row z-100 w-full transition-all justify-between fixed duration-500 ${location.pathname === "/" && scrollY > 600 ? navBgColor : "bg-transparent"} ${show ? "translate-y-0" : "-translate-y-full"}`}
@@ -100,21 +101,21 @@ export default function NavBar() {
               >
                 <polygon
                   points="16.977 17.713 8.488 0 0 17.713 16.977 17.713"
-                  className={`${navBgColor}`}
+                  className={`${dropdownBgColor}`}
                 />
               </svg>
             </div>
-            <div className={`rounded-lg py-1 px-6 overflow-hidden ${dropdownOpen ? navBgColor : "bg-transparent"} transition-all duration-500`}>
-            {projects.map((p) => (
-              <TransitionLink
-                key={p.url_name}
-                to={p.url_name}
-                style={{ fontFamily: "IBM Plex Mono" }}
-                className={`block text-xl text-right tracking-tighter w-64 py-1 font-light ${navTextColor} ${p.url_name == location.pathname ? "underline" : "hover:underline"}`}
-              >
-                {p.title}
-              </TransitionLink>
-            ))}
+            <div className={`rounded-lg py-4 px-4 overflow-hidden ${dropdownOpen ? dropdownBgColor : "bg-transparent"} transition-all duration-500`}>
+              {projects.map((p) => (
+                <TransitionLink
+                  key={p.url_name}
+                  to={p.url_name}
+                  style={{ fontFamily: "IBM Plex Mono" }}
+                  className={`block text-xl tracking-tighter py-0 font-light ${dropdownTextColor} ${p.url_name == location.pathname ? "underline" : "hover:underline"}`}
+                >
+                  {p.index} {p.title}
+                </TransitionLink>
+              ))}
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { projects } from "../content/ProjectContent";
 import { TransitionLink } from "./TransitionLink";
+import { Footer } from "./Footer";
 
 function ImageHalfNHalf({ left_image, right_image }) {
   return (
@@ -190,6 +191,7 @@ export function ProjectPage({
           <ProjectNavigationCard project={homeProjectNext} body_text_color={body_text_color} type="Next" />
         )}
       </div>
+      <Footer />
     </div>
   );
 }

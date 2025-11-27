@@ -57,24 +57,25 @@ export function ProjectCard({
           strokeWidth="4"
         />
       </svg>
-      <div className="flex flex-col flex-grow-0 flex-shrink-0 overflow-hidden px-[15px] justify-center items-center self-stretch relative">
+      <div className={`flex flex-col overflow-hidden px-[15px] justify-start self-stretch items-stretch relative`}>
         <TransitionLink to={url_name}>
           <p
             style={{ fontFamily: "epilogue, sans-serif" }}
-            className={`flex-grow-0 flex-shrink-0 text-4xl font-light tracking-tighter text-${textAlign} text-[#19255c] self-stretch`}
+            className={`flex flex-col self-stretch items-stretch text-4xl font-light tracking-tighter text-${textAlign} text-[#19255c]`}
           >
-            <span className="font-light tracking-tighter">
+            <span>
               {index}: {title}
-              {subtitle && "-"}
+              {subtitle && " - "}
+              {subtitle}
             </span>
-            {subtitle && (
+            {/* {subtitle && (
               <>
                 <br />
-                <span className="font-light tracking-tighter">
+                <span>
                   {subtitle}
                 </span>
               </>
-            )}
+            )} */}
           </p>
         </TransitionLink>
       </div>

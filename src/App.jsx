@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import { ProjectPage } from "./components/ProjectPage";
 import { projects } from "./content/ProjectContent";
 import TransitionProvider from "./components/TransitionProvider";
+import { Footer } from "./components/Footer";
 
 export default function App() {
 
@@ -34,6 +35,7 @@ export default function App() {
               />
             ))}
           </Routes>
+          <Footer />
         </main>
       </TransitionProvider>
     </Router>
