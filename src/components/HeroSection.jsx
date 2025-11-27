@@ -3,7 +3,7 @@ export function HeroSection({ firstName, lastName, tagline, arrowSrc }) {
   return (
     <div
       name="Hero Frame"
-      className="grid grid-cols-1 grid-rows-1 overflow-hidden min-h-[100vh] bg-cover bg-center bg-[url('./bkg_v.png')] place-items-center md:min-h-[90vh] md:bg-[url('./bkg_h.png')]"
+      className="grid grid-cols-1 grid-rows-1 overflow-hidden min-h-[100vh] bg-cover bg-center bg-[url('/bkg_h.png')] place-items-center md:min-h-[90vh]"
     >
       <div className="flex flex-col pb-[40dvw] pr-[20dvw] text-[#1029b4] font-thin font-serif text-[18dvw] absolute -space-y-[6dvw] md:pb-[3dvw] md:pr-[10dvw] md:text-[8dvw] md:-space-y-[3dvw]">
         <h2
