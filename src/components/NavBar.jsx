@@ -68,7 +68,7 @@ export default function NavBar() {
         <TransitionLink
           to="/about"
           style={{ fontFamily: "IBM Plex Mono" }}
-          className={`hover:underline`}
+          className={`hover:underline ${navBgColor}`}
         >
           ABOUT
         </TransitionLink>
@@ -77,7 +77,7 @@ export default function NavBar() {
           aria-haspopup="true"
           aria-expanded={dropdownOpen}
           onMouseEnter={() => setDropdownOpen(true)}
-          className="transition-colors hover:underline"
+          className={`transition-colors hover:underline ${navBgColor}`}
         >
           WORK
         </p>
