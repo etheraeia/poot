@@ -26,7 +26,7 @@ export function Footer() {
         RESUME
       </a>
       <p>|</p>
-      <a href="mailto:cwang@utexas.edu" className="hover:underline">
+      <a href="mailto:berry8053@gmail.com" className="hover:underline">
         MAIL
       </a>
       <p>|</p>
