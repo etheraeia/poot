@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { projects } from "../content/ProjectContent";
 import { TransitionLink } from "./TransitionLink";
 import { Footer } from "./Footer";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 function ImageHalfNHalf({ left_image, right_image }) {
   return (
@@ -9,12 +10,12 @@ function ImageHalfNHalf({ left_image, right_image }) {
       <img
         src={left_image}
         alt="Left"
-        className="flex-grow object-cover rounded-md w-1/2"
+        className="flex-grow object-cover w-1/2 rounded-md"
       />
       <img
         src={right_image}
         alt="Right"
-        className="flex-grow object-cover rounded-md w-1/2"
+        className="flex-grow object-cover w-1/2 rounded-md"
       />
     </div>
   );
@@ -26,12 +27,12 @@ function ImageThirds({ left_image, right_image }) {
       <img
         src={left_image}
         alt="Left"
-        className="flex-grow object-cover rounded-md w-1/3"
+        className="flex-grow object-cover w-1/3 rounded-md"
       />
       <img
         src={right_image}
         alt="Right"
-        className="flex-grow object-cover rounded-md w-2/3"
+        className="flex-grow object-cover w-2/3 rounded-md"
       />
     </div>
   );
@@ -41,11 +42,15 @@ function ProjectNavigationCard({ project, body_text_color, type }) {
   const alignment = type === "Previous" ? "text-left" : "text-right";
   const flexDirection = type === "Previous" ? "flex-row" : "flex-row-reverse";
   return (
-    <TransitionLink to={project.url_name} direction={type === "Previous" ? "left" : "right"} className={`flex ${flexDirection} gap-2`}>
+    <TransitionLink
+      to={project.url_name}
+      direction={type === "Previous" ? "left" : "right"}
+      className={`flex ${flexDirection} gap-2`}
+    >
       <img
         src={project.hero_image}
         alt={`${type} Project Hero`}
-        className="object-cover rounded-sm w-32"
+        className="object-cover w-32 rounded-sm"
       />
       <div className="flex flex-col justify-end">
         <p
@@ -56,7 +61,7 @@ function ProjectNavigationCard({ project, body_text_color, type }) {
         </p>
         <p
           style={{ fontFamily: "IBM Plex Mono" }}
-          className={`tracking-tighter text-xl font-light ${alignment} ${body_text_color}`}
+          className={`tracking-tighter text-lg font-light ${alignment} ${body_text_color}`}
         >
           {project.title}
         </p>
@@ -67,8 +72,13 @@ function ProjectNavigationCard({ project, body_text_color, type }) {
 
 export function ProjectPage({
   index,
+  page_type,
   intro_text,
   blurb,
+  project_company,
+  project_role,
+  project_timeline,
+  project_contributions,
   hero_image,
   wide_image,
   left_image,
@@ -77,10 +87,25 @@ export function ProjectPage({
   intro_text_color,
   body_text_color,
   background_color,
+  drop_bg_color,
   caption,
   elaboration,
   process_left_image,
   process_right_image,
+  problem_text,
+  research_text_1,
+  research_text_2,
+  research_text_3,
+  iteration_text_1,
+  iteration_text_2,
+  iteration_text_3,
+  results_text,
+  reflections_text,
+  research_image_1,
+  research_image_2,
+  research_image_3,
+  sketch_wireframe_image,
+  process_image_1,
 }) {
   useEffect(() => {
     document.body.className = background_color;
@@ -107,14 +132,15 @@ export function ProjectPage({
     <div
       className={`flex flex-col flex-grow-0 flex-shrink-0 h-[100%] justify-start items-center self-stretch relative`}
     >
+      <ScrollToTopButton />
       {/* SLIDE 1: Hero Image, Intro Text, Blurb */}
       <img
         src={hero_image}
         alt="Hero"
-        className="flex-grow-0 flex-shrink-0 object-cover w-[100vw] h-2/3 self-stretch"
+        className="flex-grow-0 flex-shrink-0 object-cover h-2/3 self-stretch"
       />
       <div
-        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
+        className={`flex flex-grow-0 flex-shrink-0 flex-col w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
       >
         <p
           style={{ fontFamily: "ivypresto-display, serif" }}
@@ -122,12 +148,45 @@ export function ProjectPage({
         >
           {intro_text}
         </p>
-        <p
-          style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-2xl font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+        <div
+          className={`flex flex-grow-0 flex-shrink-0 flex-row w-full py-6 gap-6 items-end self-stretch relative`}
         >
-          {blurb}
-        </p>
+          <p
+            style={{ fontFamily: "epilogue, sans-serif" }}
+            className={`w-3/5 text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+          >
+            {blurb}
+          </p>
+          <div className={`w-0.25 h-full ${drop_bg_color}`} />
+          <div
+            className={`flex flex-grow-0 flex-shrink-0 flex-col w-2/5 gap-1 items-end self-stretch relative`}
+          >
+            <p
+              style={{ fontFamily: "epilogue, sans-serif" }}
+              className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+            >
+              {project_company}
+            </p>
+            <p
+              style={{ fontFamily: "epilogue, sans-serif" }}
+              className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+            >
+              {project_role}
+            </p>
+            <p
+              style={{ fontFamily: "epilogue, sans-serif" }}
+              className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+            >
+              {project_timeline}
+            </p>
+            <p
+              style={{ fontFamily: "epilogue, sans-serif" }}
+              className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+            >
+              {project_contributions}
+            </p>
+          </div>
+        </div>
       </div>
       <div
         className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-2 justify-end items-end self-stretch relative`}
@@ -136,7 +195,7 @@ export function ProjectPage({
         {page_layout === "wide" && (
           <img
             src={wide_image}
-            className="flex-grow-0 flex-shrink-0 object-cover rounded-md w-[100%] h-[calc(100vh/] self-stretch"
+            className="flex-grow-0 flex-shrink-0 object-cover w-[100%] h-[calc(100vh/] rounded-md self-stretch"
           />
         )}
         {page_layout === "halfnhalf" && (
@@ -147,48 +206,207 @@ export function ProjectPage({
         )}
         <p
           style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-lg font-extralight tracking-tighter leading-normal text-center ${body_text_color} self-stretch`}
+          className={`flex-grow-0 flex-shrink-0 text-sm font-extralight tracking-tighter leading-normal text-center ${body_text_color} self-stretch`}
         >
           {caption}
         </p>
-      </div>
-      <div
-        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
-      >
-        {/* SLIDE 3: Process and Justifications */}
-        <div className="flex overflow-hidden justify-start items-start self-stretch relative gap-6">
-          <img
-            src={process_left_image}
-            alt="Left"
-            className="flex-grow object-cover rounded-md w-1/2"
-          />
-          <img
-            src={process_right_image}
-            alt="Right"
-            className="flex-grow object-cover rounded-md w-1/2"
-          />
-        </div>
         <p
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex-grow text-2xl font-extralight tracking-tighter leading-normal text-left ${body_text_color} self-stretch`}
+          className={`flex-grow pt-3 text-lg font-extralight tracking-tighter leading-normal text-left ${body_text_color} self-stretch`}
         >
           {elaboration}
         </p>
       </div>
       <div
-        className={`flex justify-between p-12 ${background_color} self-stretch`}
+        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
+      >
+        {/* SLIDE 3 */}
+        {page_type === "project overview" && (
+          <div className="flex overflow-hidden justify-start items-start self-stretch relative gap-6">
+            <img
+              src={process_left_image}
+              alt="Left"
+              className="flex-grow object-cover w-1/2 rounded-md"
+            />
+            <img
+              src={process_right_image}
+              alt="Right"
+              className="flex-grow object-cover w-1/2 rounded-md"
+            />
+          </div>
+        )}
+        {page_type === "case study" && (
+          <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+            <div className={`h-0.25 w-full ${drop_bg_color}`} />
+            <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+              <p
+                style={{ fontFamily: "ivypresto-display, serif" }}
+                className={`flex-grow-0 flex-shrink-0 text-3xl font-thin text-left self-stretch ${intro_text_color}`}
+              >
+                The Problem
+              </p>
+              <p
+                style={{ fontFamily: "epilogue, sans-serif" }}
+                className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+              >
+                {problem_text}
+              </p>
+            </div>
+            <div className={`h-0.25 w-full ${drop_bg_color}`} />
+            <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+              <p
+                style={{ fontFamily: "ivypresto-display, serif" }}
+                className={`flex-grow-0 flex-shrink-0 text-3xl font-thin text-left self-stretch ${intro_text_color}`}
+              >
+                The Exploration
+              </p>
+              <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
+                <p
+                  style={{ fontFamily: "epilogue, sans-serif" }}
+                  className={`w-1/2 text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                >
+                  {research_text_1}
+                </p>
+                <img
+                  src={research_image_1}
+                  className="flex-grow object-cover w-1/2 rounded-md"
+                />
+              </div>
+              {research_text_2 && (
+                <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
+                  <img
+                    src={research_image_2}
+                    className="flex-grow object-cover w-1/2 rounded-md"
+                  />
+                  <p
+                    style={{ fontFamily: "epilogue, sans-serif" }}
+                    className={`w-1/2 text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                  >
+                    {research_text_2}
+                  </p>
+                </div>
+              )}
+              {research_text_3 && (
+                <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
+                  <p
+                    style={{ fontFamily: "epilogue, sans-serif" }}
+                    className={`w-1/2 text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                  >
+                    {research_text_3}
+                  </p>
+                  <img
+                    src={research_image_3}
+                    className="flex-grow object-cover w-1/2 rounded-md"
+                  />
+                </div>
+              )}
+            </div>
+            <div className={`h-0.25 w-full ${drop_bg_color}`} />
+            <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+              <p
+                style={{ fontFamily: "ivypresto-display, serif" }}
+                className={`flex-grow-0 flex-shrink-0 text-3xl font-thin text-left self-stretch ${intro_text_color}`}
+              >
+                The Design
+              </p>
+              <img
+                src={sketch_wireframe_image}
+                className="flex-grow object-cover w-full rounded-md"
+              />
+              <p
+                style={{ fontFamily: "epilogue, sans-serif" }}
+                className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+              >
+                {iteration_text_1}
+              </p>
+              {iteration_text_2 && (
+                <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+                  <img
+                    src={process_image_1}
+                    className="flex-grow object-cover w-full rounded-md"
+                  />
+                  <p
+                    style={{ fontFamily: "epilogue, sans-serif" }}
+                    className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                  >
+                    {iteration_text_2}
+                  </p>
+                </div>
+              )}
+              <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
+                <img
+                  src={process_left_image}
+                  className="flex-grow object-cover w-1/2 rounded-md"
+                />
+                <img
+                  src={process_right_image}
+                  className="flex-grow object-cover w-1/2 rounded-md"
+                />
+              </div>
+              {iteration_text_3 && (
+                <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+                  <p
+                    style={{ fontFamily: "epilogue, sans-serif" }}
+                    className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                  >
+                    {iteration_text_3}
+                  </p>
+                </div>
+              )}
+            </div>
+            <div className={`h-0.25 w-full ${drop_bg_color}`} />
+            <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+              <p
+                style={{ fontFamily: "ivypresto-display, serif" }}
+                className={`flex-grow-0 flex-shrink-0 text-3xl font-thin text-left self-stretch ${intro_text_color}`}
+              >
+                The Outcome
+              </p>
+              <p
+                style={{ fontFamily: "epilogue, sans-serif" }}
+                className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+              >
+                {reflections_text}
+              </p>
+              <p
+                style={{ fontFamily: "epilogue, sans-serif" }}
+                className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+              >
+                {results_text}
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+      <div
+        className={`flex p-12 justify-between ${background_color} self-stretch`}
       >
         {/* Footer Buttons */}
-        { prevProject ? (
-          <ProjectNavigationCard project={prevProject} body_text_color={body_text_color} type="Previous" />
+        {prevProject ? (
+          <ProjectNavigationCard
+            project={prevProject}
+            body_text_color={body_text_color}
+            type="Previous"
+          />
         ) : (
-          <ProjectNavigationCard project={homeProjectPrev} body_text_color={body_text_color} type="Previous" />
+          <ProjectNavigationCard
+            project={homeProjectPrev}
+            body_text_color={body_text_color}
+            type="Previous"
+          />
         )}
-        { nextProject ? (
-          <ProjectNavigationCard project={nextProject} body_text_color={body_text_color} type="Next" />
-        ) :
-        (
-          <ProjectNavigationCard project={homeProjectNext} body_text_color={body_text_color} type="Next" />
+        {nextProject ? (
+          <ProjectNavigationCard
+            project={nextProject}
+            body_text_color={body_text_color}
+            type="Next"
+          />
+        ) : (
+          <ProjectNavigationCard
+            project={homeProjectNext}
+            body_text_color={body_text_color}
+            type="Next"
+          />
         )}
       </div>
       <Footer />
