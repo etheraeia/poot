@@ -309,27 +309,37 @@ export function ProjectPage({
               >
                 The Design
               </p>
-              <img
-                src={sketch_wireframe_image}
-                className="flex-grow object-cover w-full rounded-md"
-              />
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
                 className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
               >
                 {iteration_text_1}
               </p>
+              <img
+                src={sketch_wireframe_image}
+                className="flex-grow object-cover w-full rounded-md"
+              />
               {iteration_text_2 && (
                 <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
-                  <img
-                    src={process_image_1}
-                    className="flex-grow object-cover w-full rounded-md"
-                  />
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
                     className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
                   >
                     {iteration_text_2}
+                  </p>
+                  <img
+                    src={process_image_1}
+                    className="flex-grow object-cover w-full rounded-md"
+                  />
+                </div>
+              )}
+              {iteration_text_3 && (
+                <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+                  <p
+                    style={{ fontFamily: "epilogue, sans-serif" }}
+                    className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                  >
+                    {iteration_text_3}
                   </p>
                 </div>
               )}
@@ -343,16 +353,6 @@ export function ProjectPage({
                   className="flex-grow object-cover w-1/2 rounded-md"
                 />
               </div>
-              {iteration_text_3 && (
-                <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
-                  <p
-                    style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
-                  >
-                    {iteration_text_3}
-                  </p>
-                </div>
-              )}
             </div>
             <div className={`h-0.25 w-full ${drop_bg_color}`} />
             <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
