@@ -104,8 +104,8 @@ export function ProjectPage({
   research_image_1,
   research_image_2,
   research_image_3,
-  sketch_wireframe_image,
   process_image_1,
+  process_image_2,
 }) {
   useEffect(() => {
     document.body.className = background_color;
@@ -316,7 +316,7 @@ export function ProjectPage({
                 {iteration_text_1}
               </p>
               <img
-                src={sketch_wireframe_image}
+                src={process_image_1}
                 className="flex-grow object-cover w-full rounded-md"
               />
               {iteration_text_2 && (
@@ -328,7 +328,7 @@ export function ProjectPage({
                     {iteration_text_2}
                   </p>
                   <img
-                    src={process_image_1}
+                    src={process_image_2}
                     className="flex-grow object-cover w-full rounded-md"
                   />
                 </div>
