@@ -54,7 +54,7 @@ export function ProjectCard({
           x2={textAlign === "right" ? "737" : "640"}
           y2="2.5"
           stroke="#19255C"
-          strokeWidth="4"
+          strokeWidth="2"
         />
       </svg>
       <div className={`flex flex-col overflow-hidden px-[15px] justify-start self-stretch items-stretch relative`}>

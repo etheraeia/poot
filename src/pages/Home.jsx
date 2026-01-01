@@ -19,16 +19,25 @@ export default function Home() {
         arrowSrc="arrow_curve_R.png"
       />
       <ScrollToTopButton />
-      <div className="flex flex-col px-2.5 pb-[120px] bg-[#fffbf1]">
+      <div className="flex flex-col">
         <CurrentProject
           title="The Greenback Club"
           description="A Denver-based startup reducing the environmental impact of the cannabis industry with a consumer-first rewards platform."
           image="Homepage-recycler.png"
         />
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col py-20 px-2.5 gap-4">
+          <p
+          style={{ fontFamily: "ivypresto-display, serif" }}
+          className={`flex-grow-0 flex-shrink-0 text-7xl font-thin text-left self-stretch text-[#1029b4]`}
+          >
+            Past Work
+          </p>
+          <div className="h-0.5 w-full bg-[#1029b4]" />
+          <div className="flex flex-col gap-1 py-2.5">
           {projects.map((p) => (
             <ProjectCard {...p} />
           ))}
+        </div>
         </div>
       </div>
     </div>

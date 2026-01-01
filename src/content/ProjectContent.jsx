@@ -36,6 +36,7 @@ export const projects = [
         process_image_2: "/adtalk/AdTalk_branding and design system.png",
         process_left_image: "/adtalk/AdTalk_process-left.png",
         process_right_image: "/adtalk/AdTalk_process-right.png",
+        figma_prototype: "https://embed.figma.com/proto/lbgPbHPftks14jWKKBKBAs/Untitled?page-id=0%3A1&node-id=0-4274&p=f&viewport=430%2C398%2C0.13&scaling=scale-down&content-scaling=fixed&starting-point-node-id=0%3A4274&embed-host=share",
         //style stuff
         page_layout: "wide",
         intro_text_color: "text-[#149DC1]",
@@ -80,6 +81,7 @@ export const projects = [
         process_image_2: "/Cradlelist/Cradlelist_sketches.png",
         process_left_image: "/Cradlelist/Cradlelist_left.png",
         process_right_image: "/Cradlelist/Cradlelist_right.png",
+        figma_prototype: "https://embed.figma.com/proto/kEPAvYxzB1kpxJMSbxCHcP/CW_D2---Key-Screens?page-id=0%3A1&node-id=1-2&p=f&viewport=-2180%2C-222%2C0.49&scaling=scale-down&content-scaling=fixed&embed-host=share",
         //style stuff
         page_layout: "wide",
         intro_text_color: "text-[#6BBBC7]",
@@ -87,7 +89,7 @@ export const projects = [
         drop_text_color: "text-[#FFFFFF]",
         background_color: "bg-[#fffbf1]",
         drop_bg_color: "bg-[#00cba3] fill-[#00cba3]",
-        logo_color: "fill-[#00cba3]",
+        logo_color: "fill-[#98ECDB]",
     },
     {
         index: "03",
@@ -128,6 +130,7 @@ export const projects = [
         process_image_2: "/Facebook/FB_process_2.png",
         process_left_image: "/Facebook/FB_process_left.png",
         process_right_image: "/Facebook/FB_process_right.png",
+        figma_prototype: "https://embed.figma.com/proto/ZoEI3A76vJRBuG2CKozVhH/Digital-Solution-1-prototypes?page-id=3%3A2&node-id=32-452&p=f&viewport=347%2C382%2C0.13&scaling=scale-down&content-scaling=fixed&embed-host=share",
         //style stuff
         page_layout: "wide",
         intro_text_color: "text-[#0c2fd8]",

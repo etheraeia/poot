@@ -106,6 +106,7 @@ export function ProjectPage({
   research_image_3,
   process_image_1,
   process_image_2,
+  figma_prototype,
 }) {
   useEffect(() => {
     document.body.className = background_color;
@@ -362,6 +363,11 @@ export function ProjectPage({
               >
                 The Outcome
               </p>
+              {figma_prototype && (
+                <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+                  <iframe className="w-full h-150" src={figma_prototype} allowfullscreen></iframe>
+                </div>
+              )}
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
                 className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}

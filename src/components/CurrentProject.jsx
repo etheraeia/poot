@@ -3,25 +3,25 @@ export function CurrentProject({ title, description, image }) {
   return (
     <div
       name="Current Project Frame"
-      className="flex flex-grow-0 flex-shrink-0 overflow-hidden py-[60px] justify-start items-start self-stretch relative gap-2.5"
+      className="flex flex-grow-0 flex-shrink-0 overflow-hidden px-2.5 py-4 justify-start items-start self-stretch relative gap-2.5 bg-[#1029b4]"
     >
       <div className="flex flex-col flex-grow pt-[60px] pb-[120px] justify-start items-start relative gap-9">
         <p
           style={{ fontFamily: "ivypresto-display, serif" }}
-          className="flex-grow-0 flex-shrink-0 w-[705px] text-8xl font-thin text-left text-[#0c2fd8] self-stretch"
+          className="flex-grow-0 flex-shrink-0 w-[705px] text-8xl font-thin text-left text-[#fffbf1] self-stretch"
         >
           Currently prototyping:
         </p>
         <div className="flex flex-col flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-2.5">
           <p
             style={{ fontFamily: "epilogue, sans-serif" }}
-            className="text-5xl font-light tracking-tighter text-left text-[#19255c]"
+            className="text-5xl font-light tracking-tighter text-left text-[#ffffff]"
           >
             {title}
           </p>
           <p
             style={{ fontFamily: "epilogue, sans-serif" }}
-            className="w-[705px] text-2xl font-light tracking-tighter text-left text-[#19255c] self-stretch"
+            className="w-[705px] text-2xl font-light tracking-tighter text-left text-[#ffffff] self-stretch"
           >
             {description}
           </p>
