@@ -10,11 +10,10 @@ export function ProjectCard({
   layout = "image-left",
   url_name,
 }) {
-  // Image component
   const MediaComponent = () => (
     <TransitionLink
       to={url_name}
-      className={`flex-grow-0 flex-shrink-0 overflow-hidden w-1/3 h-[calc(100vw/3*(${height_modifer}))] object-cover rounded-lg relative`}
+      className={`overflow-hidden w-1/3 h-[calc(100vw/3*(${height_modifer}))] object-cover rounded-lg relative`}
     >
       { media_file.endsWith(".mp4") ? (
         <video
@@ -22,13 +21,13 @@ export function ProjectCard({
           autoPlay
           loop
           muted
-          className="w-full h-full object-cover"
+          className="w-full h-full"
         />
       ) : (
         <img
           src={media_file}
           alt={title}
-          className="w-full h-full object-cover"
+          className="w-full h-full"
         />
       )}
     </TransitionLink>
@@ -38,26 +37,9 @@ export function ProjectCard({
   const TextComponent = ({ textAlign, justifyItems = "start" }) => (
     <div
     to={url_name}
-    className={`flex flex-col flex-grow-0 flex-shrink-0 overflow-hidden w-1/3 pt-[120px] justify-start items-${justifyItems} self-stretch relative gap-2.5`}>
-      <svg
-        width="100%"
-        height="5"
-        viewBox="0 0 480 5"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        className="flex-grow-0 flex-shrink-0"
-      >
-        <line
-          x1="0"
-          y1="2.5"
-          x2={textAlign === "right" ? "737" : "640"}
-          y2="2.5"
-          stroke="#19255C"
-          strokeWidth="2"
-        />
-      </svg>
-      <div className={`flex flex-col overflow-hidden px-[15px] justify-start self-stretch items-stretch relative`}>
+    className={`flex flex-col overflow-hidden w-1/3 pt-16 justify-start items-${justifyItems} self-stretch relative gap-2.5`}>
+       <div className="h-0.5 w-full bg-[#19255C]" />
+      <div className={`flex flex-col overflow-hidden px-4 justify-start self-stretch items-stretch relative`}>
         <TransitionLink to={url_name}>
           <p
             style={{ fontFamily: "epilogue, sans-serif" }}
@@ -86,7 +68,7 @@ export function ProjectCard({
   switch (layout) {
     case "image-left": // Image left, title center-left (like Cradlelist, Rotun, Salt Lake, CSA Social, Flairs)
       return (
-        <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative">
+        <div className="flex overflow-hidden justify-start items-start self-stretch relative">
           <MediaComponent />
           <TextComponent textAlign="left" justifyItems="center" />
         </div>
@@ -94,7 +76,7 @@ export function ProjectCard({
 
     case "image-right": // Image right, title center-right (like Exoterminal, Facebook, Julie's, CSA Merch, Magic Mountain)
       return (
-        <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-end items-center self-stretch relative">
+        <div className="flex overflow-hidden justify-end items-center self-stretch relative">
           <TextComponent textAlign="right" justifyItems="center" />
           <MediaComponent />
         </div>
@@ -102,7 +84,7 @@ export function ProjectCard({
 
     case "text-left": // Image center-right, text left (like Me when the meme, Backpack Soup)
       return (
-        <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-center self-stretch relative">
+        <div className="flex overflow-hidden justify-start items-center self-stretch relative">
           <TextComponent textAlign="right" justifyItems="start" />
           <MediaComponent />
         </div>
@@ -110,7 +92,7 @@ export function ProjectCard({
 
     case "text-right": // Image center-left, text right (like Fishbowl)
       return (
-        <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-end items-center self-stretch relative">
+        <div className="flex overflow-hidden justify-end items-center self-stretch relative">
           <MediaComponent />
           <TextComponent textAlign="left" justifyItems="start" />
         </div>

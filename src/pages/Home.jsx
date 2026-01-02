@@ -23,7 +23,7 @@ export default function Home() {
         <CurrentProject
           title="The Greenback Club"
           description="A Denver-based startup reducing the environmental impact of the cannabis industry with a consumer-first rewards platform."
-          image="Homepage-recycler.png"
+          image="Greenback.png"
         />
         <div className="flex flex-col py-20 px-2.5 gap-4">
           <p

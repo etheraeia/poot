@@ -73,6 +73,7 @@ function ProjectNavigationCard({ project, body_text_color, type }) {
 export function ProjectPage({
   index,
   page_type,
+  url_name,
   intro_text,
   blurb,
   project_company,
@@ -141,7 +142,7 @@ export function ProjectPage({
         className="flex-grow-0 flex-shrink-0 object-cover h-2/3 self-stretch"
       />
       <div
-        className={`flex flex-grow-0 flex-shrink-0 flex-col w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
+        className={`flex flex-grow-0 flex-shrink-0 flex-col w-[100vw] py-6 px-[calc(100vw/9)] xl:px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
       >
         <p
           style={{ fontFamily: "ivypresto-display, serif" }}
@@ -190,7 +191,7 @@ export function ProjectPage({
         </div>
       </div>
       <div
-        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-2 justify-end items-end self-stretch relative`}
+        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/9)] xl:px-[calc(100vw/4.5)] ${background_color} gap-2 justify-end items-end self-stretch relative`}
       >
         {/* SLIDE 2: Glamour */}
         {page_layout === "wide" && (
@@ -219,7 +220,7 @@ export function ProjectPage({
         </p>
       </div>
       <div
-        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
+        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] overflow-x-visible py-6 px-[calc(100vw/9)] xl:px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
       >
         {/* SLIDE 3 */}
         {page_type === "project overview" && (
@@ -237,7 +238,7 @@ export function ProjectPage({
           </div>
         )}
         {page_type === "case study" && (
-          <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+          <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-6">
             <div className={`h-0.25 w-full ${drop_bg_color}`} />
             <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
               <p
@@ -356,7 +357,7 @@ export function ProjectPage({
               </div>
             </div>
             <div className={`h-0.25 w-full ${drop_bg_color}`} />
-            <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+            <div className="flex flex-col justify-start overflow-x-visible items-start self-stretch relative gap-4">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
                 className={`flex-grow-0 flex-shrink-0 text-3xl font-thin text-left self-stretch ${intro_text_color}`}
@@ -364,8 +365,28 @@ export function ProjectPage({
                 The Outcome
               </p>
               {figma_prototype && (
-                <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
-                  <iframe className="w-full h-150" src={figma_prototype} allowfullscreen></iframe>
+                <div className="flex flex-col justify-start overflow-x-visible items-start self-stretch relative gap-2">
+                  {url_name === "/adtalk" &&
+                    <div className="flex items-center overflow-hidden h-[53vw] xl:h-[38vw] self-center">
+                      <iframe className="pt-17 w-[calc(100px+100vw-(200vw/9))] xl:w-[calc(100px+100vw-(200vw/4.5))] h-[102vh]" src={figma_prototype} allowfullscreen></iframe>
+                    </div>
+                  }
+                  {url_name === "/cradlelist" &&
+                    <div className="flex items-center overflow-hidden h-[46vw] xl:h-[32vw] self-center">
+                      <iframe className="pt-17 w-[calc(100px+100vw-(200vw/9))] xl:w-[calc(100px+100vw-(200vw/4.5))] h-[100vh]" src={figma_prototype} allowfullscreen></iframe>
+                    </div>
+                  }
+                  {url_name === "/facebook-homepage-customization" &&
+                    <div className="flex items-center overflow-hidden h-[75vh] self-center">
+                      <iframe className="pt-17 w-[calc(100px+100vw-(200vw/9))] xl:w-[calc(100px+100vw-(200vw/4.5))] h-[100vh]" src={figma_prototype} allowfullscreen></iframe>
+                    </div>
+                  }
+                  <p
+                    style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
+                    className={`text-sm font-extralight tracking-tighter leading-normal text-center self-stretch ${body_text_color}`}
+                  >
+                    Interact with the Figma prototype!
+                  </p>
                 </div>
               )}
               <p
