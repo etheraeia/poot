@@ -6,12 +6,20 @@ export function CurrentProject({ title, description, image }) {
       className="flex overflow-hidden py-16 bg-[#1029b4] relative gap-4"
     >
       <div className="flex flex-col pl-4 w-full justify-start relative gap-9">
-        <p
-          style={{ fontFamily: "ivypresto-display, serif" }}
-          className="w-full text-8xl font-thin text-left text-[#fffbf1] "
-        >
-          Currently prototyping:
-        </p>
+        <div className="flex flex-col">
+          <p
+            style={{ fontFamily: "ivypresto-display, serif" }}
+            className="w-full text-8xl font-thin text-left text-[#fffbf1] "
+          >
+            Currently
+          </p>
+          <p
+            style={{ fontFamily: "ivypresto-display, serif" }}
+            className="w-full text-8xl font-thin text-left text-[#fffbf1] "
+          >
+            prototyping:
+          </p>
+        </div>
         <div className="flex flex-col overflow-hidden items-start relative gap-4">
           <p
             style={{ fontFamily: "epilogue, sans-serif" }}
