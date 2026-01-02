@@ -3,37 +3,55 @@ import { projects } from "../content/ProjectContent";
 import { TransitionLink } from "./TransitionLink";
 import { Footer } from "./Footer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 function ImageHalfNHalf({ left_image, right_image }) {
   return (
     <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-6">
-      <img
-        src={left_image}
-        alt="Left"
-        className="flex-grow object-cover w-1/2 rounded-md"
-      />
-      <img
-        src={right_image}
-        alt="Right"
-        className="flex-grow object-cover w-1/2 rounded-md"
-      />
+      <div className="w-1/2">
+        <Zoom>
+          <img
+            src={left_image}
+            alt="Left"
+            className="flex-grow object-cover rounded-md"
+          />
+        </Zoom>
+      </div>
+      <div className="w-1/2">
+      <Zoom>
+        <img
+          src={right_image}
+          alt="Right"
+          className="flex-grow object-cover rounded-md"
+        />
+      </Zoom>
+      </div>
     </div>
   );
 }
 
 function ImageThirds({ left_image, right_image }) {
   return (
-    <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-6">
-      <img
-        src={left_image}
-        alt="Left"
-        className="flex-grow object-cover w-1/3 rounded-md"
-      />
-      <img
-        src={right_image}
-        alt="Right"
-        className="flex-grow object-cover w-2/3 rounded-md"
-      />
+    <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-stretch self-stretch relative gap-6">
+      <div className="w-1/3">
+        <Zoom>
+          <img
+            src={left_image}
+            alt="Left"
+            className="flex-grow object-cover rounded-md"
+          />
+        </Zoom>
+      </div>
+      <div className="w-2/3">
+        <Zoom>
+          <img
+            src={right_image}
+            alt="Right"
+            className="flex-grow object-cover rounded-md"
+          />
+        </Zoom>
+      </div>
     </div>
   );
 }
@@ -195,10 +213,12 @@ export function ProjectPage({
       >
         {/* SLIDE 2: Glamour */}
         {page_layout === "wide" && (
-          <img
-            src={wide_image}
-            className="flex-grow-0 flex-shrink-0 object-cover w-[100%] h-[calc(100vh/] rounded-md self-stretch"
-          />
+          <Zoom>
+            <img
+              src={wide_image}
+              className="flex-grow-0 flex-shrink-0 object-cover w-[100%] h-[calc(100vh/] rounded-md self-stretch"
+            />
+          </Zoom>
         )}
         {page_layout === "halfnhalf" && (
           <ImageHalfNHalf left_image={left_image} right_image={right_image} />
@@ -224,18 +244,7 @@ export function ProjectPage({
       >
         {/* SLIDE 3 */}
         {page_type === "project overview" && (
-          <div className="flex overflow-hidden justify-start items-start self-stretch relative gap-6">
-            <img
-              src={process_left_image}
-              alt="Left"
-              className="flex-grow object-cover w-1/2 rounded-md"
-            />
-            <img
-              src={process_right_image}
-              alt="Right"
-              className="flex-grow object-cover w-1/2 rounded-md"
-            />
-          </div>
+          <ImageHalfNHalf left_image={process_left_image} right_image={process_right_image} />
         )}
         {page_type === "case study" && (
           <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-6">
@@ -269,17 +278,25 @@ export function ProjectPage({
                 >
                   {research_text_1}
                 </p>
-                <img
-                  src={research_image_1}
-                  className="flex-grow object-cover w-1/2 rounded-md"
-                />
+                <div className="w-1/2">
+                  <Zoom>
+                    <img
+                      src={research_image_1}
+                      className="flex-grow object-cover rounded-md"
+                    />
+                  </Zoom>
+                </div>
               </div>
               {research_text_2 && (
                 <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
-                  <img
-                    src={research_image_2}
-                    className="flex-grow object-cover w-1/2 rounded-md"
-                  />
+                  <div className="w-1/2">
+                    <Zoom>
+                      <img
+                        src={research_image_2}
+                        className="flex-grow object-cover rounded-md"
+                      />
+                    </Zoom>
+                  </div>
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
                     className={`w-1/2 text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
@@ -296,10 +313,14 @@ export function ProjectPage({
                   >
                     {research_text_3}
                   </p>
-                  <img
-                    src={research_image_3}
-                    className="flex-grow object-cover w-1/2 rounded-md"
-                  />
+                  <div className="w-1/2">
+                    <Zoom>
+                      <img
+                        src={research_image_3}
+                        className="flex-grow object-cover rounded-md"
+                      />
+                    </Zoom>
+                  </div>
                 </div>
               )}
             </div>
@@ -317,10 +338,12 @@ export function ProjectPage({
               >
                 {iteration_text_1}
               </p>
-              <img
-                src={process_image_1}
-                className="flex-grow object-cover w-full rounded-md"
-              />
+              <Zoom>
+                <img
+                  src={process_image_1}
+                  className="flex-grow object-cover w-full rounded-md"
+                />
+              </Zoom>
               {iteration_text_2 && (
                 <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
                   <p
@@ -329,10 +352,12 @@ export function ProjectPage({
                   >
                     {iteration_text_2}
                   </p>
-                  <img
-                    src={process_image_2}
-                    className="flex-grow object-cover w-full rounded-md"
-                  />
+                  <Zoom>
+                    <img
+                      src={process_image_2}
+                      className="flex-grow object-cover w-full rounded-md"
+                    />
+                  </Zoom>
                 </div>
               )}
               {iteration_text_3 && (
@@ -345,16 +370,7 @@ export function ProjectPage({
                   </p>
                 </div>
               )}
-              <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
-                <img
-                  src={process_left_image}
-                  className="flex-grow object-cover w-1/2 rounded-md"
-                />
-                <img
-                  src={process_right_image}
-                  className="flex-grow object-cover w-1/2 rounded-md"
-                />
-              </div>
+              <ImageHalfNHalf left_image={process_left_image} right_image={process_right_image} />
             </div>
             <div className={`h-0.25 w-full ${drop_bg_color}`} />
             <div className="flex flex-col justify-start overflow-x-visible items-start self-stretch relative gap-4">
@@ -377,7 +393,7 @@ export function ProjectPage({
                     </div>
                   }
                   {url_name === "/facebook-homepage-customization" &&
-                    <div className="flex items-center overflow-hidden h-[75vh] self-center">
+                    <div className="flex items-center overflow-hidden h-[81vh] self-center">
                       <iframe className="pt-17 w-[calc(100px+100vw-(200vw/9))] xl:w-[calc(100px+100vw-(200vw/4.5))] h-[100vh]" src={figma_prototype} allowfullscreen></iframe>
                     </div>
                   }
