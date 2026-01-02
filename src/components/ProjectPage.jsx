@@ -155,7 +155,7 @@ export function ProjectPage({
         >
           <p
             style={{ fontFamily: "epilogue, sans-serif" }}
-            className={`w-3/5 text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+            className={`w-3/5 text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
           >
             {blurb}
           </p>
@@ -165,25 +165,25 @@ export function ProjectPage({
           >
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
-              className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+              className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
             >
               {project_company}
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
-              className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+              className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
             >
               {project_role}
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
-              className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+              className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
             >
               {project_timeline}
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
-              className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+              className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
             >
               {project_contributions}
             </p>
@@ -208,13 +208,13 @@ export function ProjectPage({
         )}
         <p
           style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-sm font-extralight tracking-tighter leading-normal text-center ${body_text_color} self-stretch`}
+          className={`flex-grow-0 flex-shrink-0 text-sm font-light tracking-tighter leading-normal text-center ${body_text_color} self-stretch`}
         >
           {caption}
         </p>
         <p
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex-grow pt-3 text-lg font-extralight tracking-tighter leading-normal text-left ${body_text_color} self-stretch`}
+          className={`flex-grow pt-3 text-lg font-light tracking-tighter leading-normal text-left ${body_text_color} self-stretch`}
         >
           {elaboration}
         </p>
@@ -249,7 +249,7 @@ export function ProjectPage({
               </p>
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
               >
                 {problem_text}
               </p>
@@ -265,7 +265,7 @@ export function ProjectPage({
               <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
                 <p
                   style={{ fontFamily: "epilogue, sans-serif" }}
-                  className={`w-1/2 text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                  className={`w-1/2 text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
                 >
                   {research_text_1}
                 </p>
@@ -282,7 +282,7 @@ export function ProjectPage({
                   />
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-1/2 text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                    className={`w-1/2 text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
                   >
                     {research_text_2}
                   </p>
@@ -292,7 +292,7 @@ export function ProjectPage({
                 <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-1/2 text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                    className={`w-1/2 text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
                   >
                     {research_text_3}
                   </p>
@@ -313,7 +313,7 @@ export function ProjectPage({
               </p>
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                className={`w-full text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
               >
                 {iteration_text_1}
               </p>
@@ -325,7 +325,7 @@ export function ProjectPage({
                 <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                    className={`w-full text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
                   >
                     {iteration_text_2}
                   </p>
@@ -339,7 +339,7 @@ export function ProjectPage({
                 <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-full text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                    className={`w-full text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
                   >
                     {iteration_text_3}
                   </p>
@@ -383,7 +383,7 @@ export function ProjectPage({
                   }
                   <p
                     style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
-                    className={`text-sm font-extralight tracking-tighter leading-normal text-center self-stretch ${body_text_color}`}
+                    className={`text-sm font-light tracking-tighter leading-normal text-center self-stretch ${body_text_color}`}
                   >
                     Interact with the Figma prototype!
                   </p>
@@ -391,13 +391,13 @@ export function ProjectPage({
               )}
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
               >
                 {reflections_text}
               </p>
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`text-lg font-extralight tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
               >
                 {results_text}
               </p>

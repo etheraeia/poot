@@ -6,9 +6,9 @@ export default {
     ],
     extend: {
       fontFamily: {
-        aktiv: ['aktiv-grotesk', 'sans-serif'],
+        epilogue: ['epilogue', 'sans-serif'],
         plex: ['IBM Plex Mono', 'monospace'],
-        ivypresto: ['ivyprestoW-display', 'serif'],
+        ivypresto: ['ivypresto-display', 'serif'],
       },
       fontWeight: {
         thin: '100',
