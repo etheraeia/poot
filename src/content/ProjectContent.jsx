@@ -65,7 +65,7 @@ export const projects = [
         caption: "Cradlelist’s main feature is the marketplace, where parents can buy or sell childcare items.",
         elaboration: "I built Cradlelist based on insights my team and I identified from my teammates’ research, prototyping the primary feature - the marketplace. In addition to making userflows and building the prototype, I also created a branding system and design tokens. This project was completed in a two-week sprint as part of a UX design course at UT Austin.",
         //primary media
-        hero_image: "/Cradlelist/Cradlelist_Hero.png",
+        hero_image: "/Cradlelist/Cradlelist_hero.png",
         wide_image: "/Cradlelist/Cradlelist_wide.png",
         //case study content
         problem_text: "Teen parents, on top of raising their children, often lack both financial and community support, which is important because they tend to turn to other parents for information about pregnancy and planning. How might we provide access to affordable child-rearing supplies for teen parents to alleviate financial stresses while offering access to a community of parents and childcare resources?",
