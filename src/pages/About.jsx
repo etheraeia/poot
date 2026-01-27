@@ -17,32 +17,32 @@ export default function About() {
         />
         <div className="flex flex-col justify-between items-start flex-grow overflow-hidden">
           <div
-            className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative overflow-hidden gap-5"
+            className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative overflow-hidden gap-[1vw]"
           >
             <p
               style={{ fontFamily: "ivypresto-display, serif" }}
-              className="self-stretch flex-grow-0 flex-shrink-0 text-5xl font-thin text-left text-[#0c2fd8]"
+              className="self-stretch flex-grow-0 flex-shrink-0 text-5xl md:text-[3vw] font-thin text-left text-[#0c2fd8]"
             >
               Hi! I'm Corrine Wang, a graphic and interaction design student at the University of Texas
               at Austin who loves tinkering with typography.
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
-              className="self-stretch flex-grow-0 flex-shrink-0 text-2xl font-light tracking-tighter text-left text-[#19255c]"
+              className="self-stretch flex-grow-0 flex-shrink-0 text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
               Outside of school, I've worked with student organizations and startups, and
               have experience in UX/UI, merch design, and layout and publication.
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
-              className="self-stretch flex-grow-0 flex-shrink-0 text-2xl font-light tracking-tighter text-left text-[#19255c]"
+              className="self-stretch flex-grow-0 flex-shrink-0 text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
               As a designer, I strive to marry function with joy, evoking a sense of magic and discovery
               while addressing unseen perspectives and populations.
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
-              className="self-stretch flex-grow-0 flex-shrink-0 text-2xl font-light tracking-tighter text-left text-[#19255c]"
+              className="self-stretch flex-grow-0 flex-shrink-0 text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
               As a human, I enjoy eating sushi, sitting in boxes, sleeping, and dressing up.
             </p>

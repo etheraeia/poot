@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
+@theme {
+  --breakpoint-md: 1080px;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -27,7 +31,7 @@
   font-style: normal;
   font-stretch: normal;
   font-display: auto;
-} 
+}
 
 @font-face {
   font-family: "epilogue", sans-serif;
@@ -37,7 +41,7 @@
   font-style: italic;
   font-stretch: normal;
   font-display: auto;
-} 
+}
 
 @font-face {
   font-family: ivypresto-display;

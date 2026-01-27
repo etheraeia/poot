@@ -15,7 +15,7 @@ export function ProjectCard({
       to={url_name}
       className={`overflow-hidden w-1/3 h-[calc(100vw/3*(${height_modifer}))] object-cover rounded-lg relative`}
     >
-      { media_file.endsWith(".mp4") ? (
+      {media_file.endsWith(".mp4") ? (
         <video
           src={media_file}
           autoPlay
@@ -36,14 +36,14 @@ export function ProjectCard({
   // Text content component with dynamic alignment
   const TextComponent = ({ textAlign, justifyItems = "start" }) => (
     <div
-    to={url_name}
-    className={`flex flex-col overflow-hidden w-1/3 pt-16 justify-start items-${justifyItems} self-stretch relative gap-2.5`}>
-       <div className="h-0.5 w-full bg-[#19255C]" />
+      to={url_name}
+      className={`flex flex-col overflow-hidden w-1/3 pt-16 justify-start items-${justifyItems} self-stretch relative gap-2.5`}>
+      <div className="h-0.5 w-full bg-[#19255C]" />
       <div className={`flex flex-col overflow-hidden px-4 justify-start self-stretch items-stretch relative`}>
         <TransitionLink to={url_name}>
           <p
             style={{ fontFamily: "epilogue, sans-serif" }}
-            className={`flex flex-col self-stretch items-stretch text-4xl font-light tracking-tighter text-${textAlign} text-[#19255c]`}
+            className={`flex flex-col self-stretch items-stretch text-4xl md:text-[2vw] font-light tracking-tighter text-${textAlign} text-[#19255c]`}
           >
             <span>
               {index}: {title}

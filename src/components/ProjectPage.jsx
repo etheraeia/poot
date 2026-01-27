@@ -19,13 +19,13 @@ function ImageHalfNHalf({ left_image, right_image }) {
         </Zoom>
       </div>
       <div className="w-1/2">
-      <Zoom>
-        <img
-          src={right_image}
-          alt="Right"
-          className="flex-grow object-cover rounded-md"
-        />
-      </Zoom>
+        <Zoom>
+          <img
+            src={right_image}
+            alt="Right"
+            className="flex-grow object-cover rounded-md"
+          />
+        </Zoom>
       </div>
     </div>
   );
@@ -79,7 +79,7 @@ function ProjectNavigationCard({ project, body_text_color, type }) {
         </p>
         <p
           style={{ fontFamily: "IBM Plex Mono" }}
-          className={`tracking-tighter text-lg font-light ${alignment} ${body_text_color}`}
+          className={`tracking-tighter text-lg md:text-[1.1vw] font-light ${alignment} ${body_text_color}`}
         >
           {project.title}
         </p>
@@ -157,66 +157,46 @@ export function ProjectPage({
       <img
         src={hero_image}
         alt="Hero"
-        className="flex-grow-0 flex-shrink-0 object-cover h-2/3 self-stretch"
+        className="flex-grow-0 flex-shrink-0 object-cover h-4/5 self-stretch"
       />
       <div
-        className={`flex flex-grow-0 flex-shrink-0 flex-col w-[100vw] py-6 px-[calc(100vw/9)] xl:px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
+        className={`flex flex-grow-0 flex-shrink-0 flex-col w-[100vw] py-6 px-[10vw] md:px-[20vw] ${background_color} gap-6 justify-end items-end self-stretch relative`}
       >
         <p
           style={{ fontFamily: "ivypresto-display, serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-7xl font-thin text-left self-stretch ${intro_text_color}`}
+          className={`flex-grow-0 flex-shrink-0 text-6xl md:text-[4vw] font-thin text-left self-stretch ${intro_text_color}`}
         >
           {intro_text}
         </p>
         <div
-          className={`flex flex-grow-0 flex-shrink-0 flex-row w-full py-6 gap-6 items-end self-stretch relative`}
+          style={{ fontFamily: "epilogue, sans-serif" }}
+          className={`flex flex-grow-0 flex-shrink-0 flex-row w-full py-6 gap-6 self-stretch relative text-lg md:text-[1.1vw] font-light tracking-tighter text-left ${body_text_color} items-stretch`}
         >
           <p
-            style={{ fontFamily: "epilogue, sans-serif" }}
-            className={`w-3/5 text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+            className={`w-3/5`}
           >
             {blurb}
           </p>
-          <div className={`w-0.25 h-full ${drop_bg_color}`} />
+          <div className={`w-[1px] h-full ${drop_bg_color}`} />
           <div
-            className={`flex flex-grow-0 flex-shrink-0 flex-col w-2/5 gap-1 items-end self-stretch relative`}
+            className={`flex flex-grow-0 flex-shrink-0 flex-col w-2/5 gap-1 self-stretch relative tracking-tighter text-left items-stretch`}
           >
-            <p
-              style={{ fontFamily: "epilogue, sans-serif" }}
-              className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
-            >
-              {project_company}
-            </p>
-            <p
-              style={{ fontFamily: "epilogue, sans-serif" }}
-              className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
-            >
-              {project_role}
-            </p>
-            <p
-              style={{ fontFamily: "epilogue, sans-serif" }}
-              className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
-            >
-              {project_timeline}
-            </p>
-            <p
-              style={{ fontFamily: "epilogue, sans-serif" }}
-              className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
-            >
-              {project_contributions}
-            </p>
+            <p> {project_company} </p>
+            <p> {project_role} </p>
+            <p> {project_timeline} </p>
+            <p> {project_contributions} </p>
           </div>
         </div>
       </div>
       <div
-        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[calc(100vw/9)] xl:px-[calc(100vw/4.5)] ${background_color} gap-2 justify-end items-end self-stretch relative`}
+        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[10vw] md:px-[20vw] ${background_color} gap-2 justify-end items-end self-stretch relative`}
       >
         {/* SLIDE 2: Glamour */}
         {page_layout === "wide" && (
           <Zoom>
             <img
               src={wide_image}
-              className="flex-grow-0 flex-shrink-0 object-cover w-[100%] h-[calc(100vh/] rounded-md self-stretch"
+              className="flex-grow-0 flex-shrink-0 object-cover w-[100%] rounded-md self-stretch"
             />
           </Zoom>
         )}
@@ -228,19 +208,19 @@ export function ProjectPage({
         )}
         <p
           style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-sm font-light tracking-tighter leading-normal text-center ${body_text_color} self-stretch`}
+          className={`flex-grow-0 flex-shrink-0 text-sm md:text-[0.9vw] font-light tracking-tighter text-center ${body_text_color} self-stretch`}
         >
           {caption}
         </p>
         <p
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex-grow pt-3 text-lg font-light tracking-tighter leading-normal text-left ${body_text_color} self-stretch`}
+          className={`flex-grow pt-3 text-lg md:text-[1.1vw] font-light tracking-tighter text-left ${body_text_color} self-stretch`}
         >
           {elaboration}
         </p>
       </div>
       <div
-        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] overflow-x-visible py-6 px-[calc(100vw/9)] xl:px-[calc(100vw/4.5)] ${background_color} gap-6 justify-end items-end self-stretch relative`}
+        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] overflow-x-visible py-6 px-[10vw] md:px-[20vw] ${background_color} gap-6 justify-end items-end self-stretch relative`}
       >
         {/* SLIDE 3 */}
         {page_type === "project overview" && (
@@ -252,13 +232,13 @@ export function ProjectPage({
             <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
-                className={`flex-grow-0 flex-shrink-0 text-3xl font-thin text-left self-stretch ${intro_text_color}`}
+                className={`flex-grow-0 flex-shrink-0 text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
               >
                 The Problem
               </p>
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                className={`text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
               >
                 {problem_text}
               </p>
@@ -267,14 +247,14 @@ export function ProjectPage({
             <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
-                className={`flex-grow-0 flex-shrink-0 text-3xl font-thin text-left self-stretch ${intro_text_color}`}
+                className={`flex-grow-0 flex-shrink-0 text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
               >
                 The Exploration
               </p>
               <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
                 <p
                   style={{ fontFamily: "epilogue, sans-serif" }}
-                  className={`w-1/2 text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                  className={`w-1/2 text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
                 >
                   {research_text_1}
                 </p>
@@ -299,7 +279,7 @@ export function ProjectPage({
                   </div>
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-1/2 text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                    className={`w-1/2 text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
                   >
                     {research_text_2}
                   </p>
@@ -309,7 +289,7 @@ export function ProjectPage({
                 <div className="flex flex-row overflow-hidden justify-start items-start self-stretch relative gap-6">
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-1/2 text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                    className={`w-1/2 text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
                   >
                     {research_text_3}
                   </p>
@@ -328,13 +308,13 @@ export function ProjectPage({
             <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
-                className={`flex-grow-0 flex-shrink-0 text-3xl font-thin text-left self-stretch ${intro_text_color}`}
+                className={`flex-grow-0 flex-shrink-0 text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
               >
                 The Design
               </p>
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`w-full text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                className={`w-full text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
               >
                 {iteration_text_1}
               </p>
@@ -348,7 +328,7 @@ export function ProjectPage({
                 <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-full text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                    className={`w-full text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
                   >
                     {iteration_text_2}
                   </p>
@@ -364,7 +344,7 @@ export function ProjectPage({
                 <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-full text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                    className={`w-full text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
                   >
                     {iteration_text_3}
                   </p>
@@ -376,30 +356,30 @@ export function ProjectPage({
             <div className="flex flex-col justify-start overflow-x-visible items-start self-stretch relative gap-4">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
-                className={`flex-grow-0 flex-shrink-0 text-3xl font-thin text-left self-stretch ${intro_text_color}`}
+                className={`flex-grow-0 flex-shrink-0 text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
               >
                 The Outcome
               </p>
               {figma_prototype && (
                 <div className="flex flex-col justify-start overflow-x-visible items-start self-stretch relative gap-2">
                   {url_name === "/adtalk" &&
-                    <div className="flex items-center overflow-hidden h-[53vw] xl:h-[38vw] self-center">
-                      <iframe className="pt-17 w-[calc(100px+100vw-(200vw/9))] xl:w-[calc(100px+100vw-(200vw/4.5))] h-[102vh]" src={figma_prototype} allowfullscreen></iframe>
+                    <div className="flex items-center overflow-hidden h-[53vw] md:h-[40vw] self-center">
+                      <iframe className="pt-17 w-[calc(100px+80vw)] md:w-[calc(100px+60vw)] h-[102vh]" src={figma_prototype} allowfullscreen></iframe>
                     </div>
                   }
                   {url_name === "/cradlelist" &&
-                    <div className="flex items-center overflow-hidden h-[46vw] xl:h-[32vw] self-center">
-                      <iframe className="pt-17 w-[calc(100px+100vw-(200vw/9))] xl:w-[calc(100px+100vw-(200vw/4.5))] h-[100vh]" src={figma_prototype} allowfullscreen></iframe>
+                    <div className="flex items-center overflow-hidden h-[46vw] md:h-[34vw] self-center">
+                      <iframe className="pt-17 w-[calc(100px+80vw)] md:w-[calc(100px+60vw)] h-[100vh]" src={figma_prototype} allowfullscreen></iframe>
                     </div>
                   }
                   {url_name === "/facebook-homepage-customization" &&
-                    <div className="flex items-center overflow-hidden h-[81vh] self-center">
-                      <iframe className="pt-17 w-[calc(100px+100vw-(200vw/9))] xl:w-[calc(100px+100vw-(200vw/4.5))] h-[100vh]" src={figma_prototype} allowfullscreen></iframe>
+                    <div className="flex items-center overflow-hidden h-[78vh] self-center">
+                      <iframe className="pt-17 w-[calc(100px+100vw-(200vw/9))] md:w-[calc(100px+100vw-(200vw/4.5))] h-[100vh]" src={figma_prototype} allowfullscreen></iframe>
                     </div>
                   }
                   <p
                     style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
-                    className={`text-sm font-light tracking-tighter leading-normal text-center self-stretch ${body_text_color}`}
+                    className={`text-sm md:text-[0.9vw]  font-light tracking-tighter text-center self-stretch ${body_text_color}`}
                   >
                     Interact with the Figma prototype!
                   </p>
@@ -407,13 +387,13 @@ export function ProjectPage({
               )}
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                className={`text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
               >
                 {reflections_text}
               </p>
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`text-lg font-light tracking-tighter leading-normal text-left self-stretch ${body_text_color}`}
+                className={`text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
               >
                 {results_text}
               </p>

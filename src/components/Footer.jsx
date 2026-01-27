@@ -15,7 +15,7 @@ export function Footer() {
   return (
     <div
       style={{ fontFamily: "IBM Plex Mono" }}
-      className={`flex flex-row w-full py-6 ${footerBgColor} justify-center items-center gap-4 ${footerTextColor} font-light`}
+      className={`flex flex-row w-full py-6 ${footerBgColor} justify-center items-center gap-4 ${footerTextColor} font-light md:text-[1vw]`}
     >
       <a
         href={Pdf}
