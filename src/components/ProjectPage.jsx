@@ -8,7 +8,7 @@ import 'react-medium-image-zoom/dist/styles.css'
 
 function ImageHalfNHalf({ left_image, right_image }) {
   return (
-    <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-start self-stretch relative gap-6">
+    <div className="flex   overflow-hidden justify-start items-start self-stretch relative gap-6">
       <div className="w-1/2">
         <Zoom>
           <img
@@ -33,7 +33,7 @@ function ImageHalfNHalf({ left_image, right_image }) {
 
 function ImageThirds({ left_image, right_image }) {
   return (
-    <div className="flex flex-grow-0 flex-shrink-0 overflow-hidden justify-start items-stretch self-stretch relative gap-6">
+    <div className="flex   overflow-hidden justify-start items-stretch self-stretch relative gap-6">
       <div className="w-1/3">
         <Zoom>
           <img
@@ -150,36 +150,36 @@ export function ProjectPage({
   };
   return (
     <div
-      className={`flex flex-col flex-grow-0 flex-shrink-0 h-[100%] justify-start items-center self-stretch relative`}
+      className={`flex flex-col   h-[100%] justify-start items-center self-stretch relative`}
     >
       <ScrollToTopButton />
       {/* SLIDE 1: Hero Image, Intro Text, Blurb */}
       <img
         src={hero_image}
         alt="Hero"
-        className="flex-grow-0 flex-shrink-0 object-cover h-4/5 self-stretch"
+        className=" flex-grow-0 flex-shrink-0 object-cover h-4/5 self-stretch"
       />
       <div
-        className={`flex flex-grow-0 flex-shrink-0 flex-col w-[100vw] py-6 px-[10vw] md:px-[20vw] ${background_color} gap-6 justify-end items-end self-stretch relative`}
+        className={`flex flex-col w-[100vw] py-6 px-[10vw] md:px-[20vw] ${background_color} gap-6 justify-end items-end self-stretch relative`}
       >
         <p
           style={{ fontFamily: "ivypresto-display, serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-6xl md:text-[4vw] font-thin text-left self-stretch ${intro_text_color}`}
+          className={`  text-6xl md:text-[4vw] font-thin text-left self-stretch ${intro_text_color}`}
         >
           {intro_text}
         </p>
         <div
           style={{ fontFamily: "epilogue, sans-serif" }}
-          className={`flex flex-grow-0 flex-shrink-0 flex-row w-full py-6 gap-6 self-stretch relative text-lg md:text-[1.1vw] font-light tracking-tighter text-left ${body_text_color} items-stretch`}
+          className={`flex flex-row w-full py-6 gap-6 items-stretch relative text-lg md:text-[1.1vw] font-light tracking-tighter text-left ${body_text_color} items-stretch`}
         >
           <p
             className={`w-3/5`}
           >
             {blurb}
           </p>
-          <div className={`w-[1px] h-full ${drop_bg_color}`} />
+          <div className={`w-0.5 h-full ${drop_bg_color}`} />
           <div
-            className={`flex flex-grow-0 flex-shrink-0 flex-col w-2/5 gap-1 self-stretch relative tracking-tighter text-left items-stretch`}
+            className={`flex flex-col w-2/5 gap-1 self-stretch relative tracking-tighter text-left items-stretch`}
           >
             <p> {project_company} </p>
             <p> {project_role} </p>
@@ -189,14 +189,14 @@ export function ProjectPage({
         </div>
       </div>
       <div
-        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] py-6 px-[10vw] md:px-[20vw] ${background_color} gap-2 justify-end items-end self-stretch relative`}
+        className={`flex flex-col w-[100vw] py-6 px-[10vw] md:px-[20vw] ${background_color} gap-2 justify-end items-stretch self-stretch relative`}
       >
         {/* SLIDE 2: Glamour */}
         {page_layout === "wide" && (
           <Zoom>
             <img
               src={wide_image}
-              className="flex-grow-0 flex-shrink-0 object-cover w-[100%] rounded-md self-stretch"
+              className="object-cover rounded-md w-full"
             />
           </Zoom>
         )}
@@ -208,7 +208,7 @@ export function ProjectPage({
         )}
         <p
           style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
-          className={`flex-grow-0 flex-shrink-0 text-sm md:text-[0.9vw] font-light tracking-tighter text-center ${body_text_color} self-stretch`}
+          className={`text-sm md:text-[0.9vw] font-light tracking-tighter text-center ${body_text_color} self-stretch`}
         >
           {caption}
         </p>
@@ -220,7 +220,7 @@ export function ProjectPage({
         </p>
       </div>
       <div
-        className={`flex flex-col flex-grow-0 flex-shrink-0 w-[100vw] overflow-x-visible py-6 px-[10vw] md:px-[20vw] ${background_color} gap-6 justify-end items-end self-stretch relative`}
+        className={`flex flex-col w-[100vw] overflow-x-visible py-6 px-[10vw] md:px-[20vw] ${background_color} gap-6 justify-end items-end self-stretch relative`}
       >
         {/* SLIDE 3 */}
         {page_type === "project overview" && (
@@ -228,11 +228,11 @@ export function ProjectPage({
         )}
         {page_type === "case study" && (
           <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-6">
-            <div className={`h-0.25 w-full ${drop_bg_color}`} />
+            <div className={`h-0.5 w-full ${drop_bg_color}`} />
             <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
-                className={`flex-grow-0 flex-shrink-0 text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
+                className={`  text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
               >
                 The Problem
               </p>
@@ -243,11 +243,11 @@ export function ProjectPage({
                 {problem_text}
               </p>
             </div>
-            <div className={`h-0.25 w-full ${drop_bg_color}`} />
+            <div className={`h-0.5 w-full ${drop_bg_color}`} />
             <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
-                className={`flex-grow-0 flex-shrink-0 text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
+                className={`  text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
               >
                 The Exploration
               </p>
@@ -304,38 +304,38 @@ export function ProjectPage({
                 </div>
               )}
             </div>
-            <div className={`h-0.25 w-full ${drop_bg_color}`} />
-            <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+            <div className={`h-0.5 w-full ${drop_bg_color}`} />
+            <div className="flex flex-col overflow-hidden justify-start items-stretch self-stretch relative gap-6">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
-                className={`flex-grow-0 flex-shrink-0 text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
+                className={`  text-3xl md:text-[2vw] font-thin text-left ${intro_text_color}`}
               >
                 The Design
               </p>
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`w-full text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
+                className={`w-full text-lg md:text-[1.1vw] font-light tracking-tighter text-left ${body_text_color}`}
               >
                 {iteration_text_1}
               </p>
               <Zoom>
                 <img
                   src={process_image_1}
-                  className="flex-grow object-cover w-full rounded-md"
+                  className="object-cover w-full rounded-md"
                 />
               </Zoom>
               {iteration_text_2 && (
-                <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+                <div className="flex flex-col overflow-hidden justify-start items-stretch relative gap-6">
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-full text-lg md:text-[1.1vw] font-light tracking-tighter text-left self-stretch ${body_text_color}`}
+                    className={`w-full text-lg md:text-[1.1vw] font-light tracking-tighter text-left ${body_text_color}`}
                   >
                     {iteration_text_2}
                   </p>
                   <Zoom>
                     <img
                       src={process_image_2}
-                      className="flex-grow object-cover w-full rounded-md"
+                      className="object-cover w-full rounded-md"
                     />
                   </Zoom>
                 </div>
@@ -352,11 +352,11 @@ export function ProjectPage({
               )}
               <ImageHalfNHalf left_image={process_left_image} right_image={process_right_image} />
             </div>
-            <div className={`h-0.25 w-full ${drop_bg_color}`} />
+            <div className={`h-0.5 w-full ${drop_bg_color}`} />
             <div className="flex flex-col justify-start overflow-x-visible items-start self-stretch relative gap-4">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
-                className={`flex-grow-0 flex-shrink-0 text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
+                className={`  text-3xl md:text-[2vw] font-thin text-left self-stretch ${intro_text_color}`}
               >
                 The Outcome
               </p>

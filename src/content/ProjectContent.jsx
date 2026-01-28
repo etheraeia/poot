@@ -135,7 +135,7 @@ export const projects = [
         page_layout: "wide",
         intro_text_color: "text-[#0c2fd8]",
         body_text_color: "text-[#19255c]",
-        background_color: "bg-[#FFFFFF]",
+        background_color: "bg-[#F1F5FA]",
         drop_bg_color: "bg-[#0c2fd8] fill-[#0c2fd8]",
         logo_color: "fill-[#0c2fd8]",
     },

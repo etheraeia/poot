@@ -28,11 +28,11 @@ export default function Home() {
         <div className="flex flex-col py-20 px-2.5 gap-4">
           <p
             style={{ fontFamily: "ivypresto-display, serif" }}
-            className={`flex-grow-0 flex-shrink-0 text-7xl md:text-[5vw] font-thin text-left self-stretch text-[#1029b4]`}
+            className={`  text-7xl md:text-[5vw] font-thin text-left self-stretch text-[#1029b4]`}
           >
             Past Work
           </p>
-          <div className="h-0.5 w-full bg-[#1029b4]" />
+          <div className="h-0.5 w-full bg-[#19255C]" />
           <div className="flex flex-col gap-1 py-2.5">
             {projects.map((p) => (
               <ProjectCard {...p} />
