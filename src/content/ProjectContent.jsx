@@ -149,7 +149,7 @@ export const projects = [
         // project page stuff
         page_type: "project overview",
         url_name: "/exoterminal",
-        intro_text: "Exoterminal is a pixel typeface.",
+        intro_text: "A pixel typeface.",
         blurb: "Exoterminal’s almost serpentine curves give the otherwise nondescript typeface a distinctly alien feel, infusing simple letterforms with a slight edge.",
         project_company: "School Project",
         project_role: "Role: Type Designer",
@@ -181,7 +181,7 @@ export const projects = [
         // project page stuff
         page_type: "project overview",
         url_name: "/rotun",
-        intro_text: "Rotun is an exploration into modular blackletter.",
+        intro_text: "An exploration into modular blackletter.",
         blurb: "Designed for illegibility, Rotun’s towering spires and billowing strokes flirt with classic blackletter letterforms while toeing the line of comprehension. ",
         project_company: "School Project",
         project_role: "Role: Type Designer",
