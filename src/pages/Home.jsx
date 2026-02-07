@@ -41,15 +41,15 @@ export default function Home() {
       />
       <ScrollToTopButton />
       <div className="flex flex-col">
-        <div className="bg-[#1029b4] h-[110vh] py-36">
+        <div className="flex bg-[#1029b4] h-[125vh] items-center justify-center">
         <div
         ref={ref1}
         className={`transition-opacity ease-in duration-1000 ${isVisible1 ? "opacity-100" : "opacity-0"}`}
         >
           <CurrentProject
-          title="The Greenback Club"
-          description="A Denver-based startup reducing the environmental impact of the cannabis industry with a consumer-first rewards platform."
-          image="Greenback.png"
+          title="Austin Parks and Recreation Signage"
+          description="Collaborating with Austin Parks and Recreation to redefine sustainability storytelling in Austin parks at wkrm, a student-run, faculty-led design studio."
+          image="wkrm.JPG"
         />
         </div>
         </div>
