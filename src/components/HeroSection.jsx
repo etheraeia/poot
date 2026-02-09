@@ -3,7 +3,7 @@ export function HeroSection({ firstName, lastName, tagline, arrowSrc }) {
   return (
     <div
       name="Hero Frame"
-      className="grid grid-cols-1 grid-rows-1 overflow-hidden h-[100vh] bg-cover bg-center bg-[url('/bkg_v.png')] md:bg-[url('/bkg_h.png')] place-items-center"
+      className="relative grid grid-cols-1 grid-rows-1 overflow-hidden h-[100vh] bg-cover bg-center bg-[url('/bkg_v.png')] md:bg-[url('/bkg_h.png')] place-items-center"
     >
       <div className="flex flex-col pb-[24dvw] pr-[8dvw] text-[#1029b4] font-thin font-serif text-[16dvw] absolute -space-y-[6dvw] md:pb-[3dvw] md:pr-[10dvw] md:text-[8dvw] md:-space-y-[3dvw]">
         <h2
@@ -21,7 +21,7 @@ export function HeroSection({ firstName, lastName, tagline, arrowSrc }) {
       </div>
       <img
         src={arrowSrc}
-        className="h-[12dvw] mt-[10dvw] ml-[36dvw] absolute md:h-[6dvw] md:mt-[10dvw] md:ml-[15dvw]"
+        className="h-[12dvw]  mt-[10dvw] ml-[36dvw] absolute md:h-[6dvw] md:mt-[10dvw] md:ml-[15dvw]"
       />
       <p
         style={{ fontFamily: "epilogue, sans-serif" }}
