@@ -75,7 +75,7 @@ export default function NavBar() {
             aria-haspopup="true"
             aria-expanded={dropdownOpen && show}
             onMouseEnter={() => setDropdownOpen(show)}
-            className={`transition-colors hover:underline`}
+            className={`group transition-colors hover:underline`}
           >
             WORK
           </p>
@@ -83,16 +83,16 @@ export default function NavBar() {
       </div>
       {/* DROPDOWN */}
       <div
-        onMouseEnter={() => setDropdownOpen(dropdownOpen && show)}
-        onMouseOver={() => setDropdownOpen(dropdownOpen && show)}
-        onMouseLeave={() => setDropdownOpen(false)}
-        className={`pt-15 absolute top-2 right-2 -z-100 grow`}
+        className={`pt-15 absolute top-2 right-2 -z-100 grow ${dropdownOpen ? "pointer-events-auto" : "pointer-events-none"}`}
       >
         <div 
         className={`overflow-hidden`}
         >
           <div
             className={`flex flex-col transition-all duration-500 ${dropdownOpen ? "translate-y-0 " : "-translate-y-[100%]"}`}
+            onMouseEnter={() => setDropdownOpen(dropdownOpen && show)}
+            onMouseOver={() => setDropdownOpen(dropdownOpen && show)}
+            onMouseLeave={() => setDropdownOpen(false)}
           >
             {/* <div className="w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-b-16 border-b-blue-500"></div> */}
             <div className="flex w-full px-9 justify-end">
