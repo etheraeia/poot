@@ -53,7 +53,7 @@ export default function Home() {
           >
             <CurrentProject
               title="Austin Parks and Recreation Signage"
-              description="Collaborating with Austin Parks and Recreation to redefine sustainability storytelling in Austin parks at wkrm, a student-run, faculty-led design studio."
+              description="collaborating with austin parks and recreation to redefine sustainability storytelling in austin parks at wkrm, a student-run, faculty-led design studio."
               image="wkrm.JPG"
             />
           </div>

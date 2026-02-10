@@ -23,28 +23,28 @@ export default function About() {
               style={{ fontFamily: "ivypresto-display, serif" }}
               className="self-stretch text-5xl md:text-[3vw] font-thin text-left text-[#0c2fd8]"
             >
-              Hi! I'm Corrine Wang, a graphic and interaction design student at the University of Texas
+              Hi! I'm Corrine Wang, a design student at the University of Texas
               at Austin who loves tinkering with typography.
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
               className="self-stretch text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
-              Outside of school, I've worked with student organizations and startups, and
-              have experience in UX/UI, merch design, and layout and publication.
+              outside of school, i've worked with student organizations and startups, and
+              have experience in ux/ui, merch design, and layout and publication.
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
               className="self-stretch text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
-              As a designer, I strive to marry function with joy, evoking a sense of magic and discovery
+              as a designer, i strive to marry function with joy, evoking a sense of magic and discovery
               while addressing unseen perspectives and populations.
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
               className="self-stretch text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
-              As a human, I enjoy eating sushi, sitting in boxes, sleeping, and dressing up.
+              as a human, i enjoy eating sushi, sitting in boxes, sleeping, and dressing up.
             </p>
           </div>
         </div>
