@@ -9,6 +9,8 @@ export function ProjectCard({
   height_modifer = "1080/1920",
   layout = "image-left",
   url_name,
+  project_timeline,
+  page_type,
 }) {
   const MediaComponent = () => (
     <TransitionLink
@@ -41,24 +43,26 @@ export function ProjectCard({
       <div className="h-0.5 w-full bg-[#19255C]" />
       <div className={`flex flex-col overflow-hidden px-4 justify-start self-stretch items-stretch relative`}>
         <TransitionLink to={url_name}>
-          <p
-            style={{ fontFamily: "epilogue, sans-serif" }}
-            className={`flex flex-col self-stretch items-stretch text-4xl md:text-[2vw] font-light tracking-tighter text-${textAlign} text-[#19255c]`}
-          >
-            <span>
-              {index}: {title}
-              {subtitle && " - "}
-              {subtitle}
-            </span>
-            {/* {subtitle && (
-              <>
-                <br />
-                <span>
-                  {subtitle}
-                </span>
-              </>
-            )} */}
-          </p>
+          <div className="flex flex-col gap-2">
+            <p
+                style={{ fontFamily: "IBM Plex Mono" }}
+                className={`flex flex-col text-xl text-${textAlign} font-light tracking-tighter text-[#19255c] md:text-[1.2vw]`}
+            >
+                {index}: {title}
+            </p>
+            <p
+              style={{ fontFamily: "epilogue, sans-serif" }}
+              className={`flex flex-col mt-2 text-2xl text-${textAlign} font-light tracking-tighter text-[#19255c] md:text-[2vw]`}
+            >
+                {subtitle}
+            </p>
+            <p
+                style={{ fontFamily: "IBM Plex Mono" }}
+                className={`flex flex-col text-lg text-${textAlign} font-light tracking-tighter text-[#19255c] md:text-[0.8vw]`}
+            >
+               {page_type} · {project_timeline.split("- ").pop()}
+            </p>
+          </div>
         </TransitionLink>
       </div>
     </div>

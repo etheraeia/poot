@@ -2,7 +2,7 @@ export const projects = [
     {
         index: "01",
         title: "AdTalk",
-        subtitle: "an AI-powered marketing platform",
+        subtitle: "ai-powered marketing and analytics platform",
         media_file: "/adtalk/AdTalk.png",
         height_modifer: "1080/1920",
         layout: "text-right",
@@ -49,7 +49,7 @@ export const projects = [
     {
         index: "02",
         title: "Cradlelist",
-        subtitle: "a marketplace for new and teen parents",
+        subtitle: "imagining an e-commerce solution for new and teen parents",
         media_file: "/Cradlelist/Cradlelist.png",
         height_modifer: "1080/1920",
         layout: "image-left",
@@ -94,7 +94,7 @@ export const projects = [
     {
         index: "03",
         title: "Facebook Homepage Customization",
-        subtitle: "a customizable redesign concept",
+        subtitle: "exploring a more accessible facebook homepage",
         media_file: "/Facebook/FB.png",
         height_modifer: "935/470",
         layout: "text-right",
@@ -142,7 +142,7 @@ export const projects = [
     {
         index: "04",
         title: "Exoterminal",
-        subtitle: "a pixel typeface and game prototype",
+        subtitle: "pixel typeface for a game about crabs and words",
         media_file: "/Exoterminal/Exoterminal.png",
         height_modifer: "393/480",
         layout: "image-left",
@@ -174,7 +174,7 @@ export const projects = [
     {
         index: "05",
         title: "Rotun",
-        subtitle: "a modular blackletter",
+        subtitle: "experiments in modular blackletter",
         media_file: "/Rotun/Rotun_VIDEO.mp4",
         height_modifer: "587/470",
         layout: "text-right",
@@ -204,7 +204,7 @@ export const projects = [
     {
         index: "06",
         title: "Me when the meme got type in it",
-        subtitle: "a study on typography and memes",
+        subtitle: "book about typography, memes, and designers",
         media_file: "/me when the meme/Me_when_the_meme_got_type.png",
         height_modifer: "9/16",
         layout: "image-right",
@@ -236,7 +236,7 @@ export const projects = [
     {
         index: "07",
         title: "Julie's Noodles",
-        subtitle: "coupon card",
+        subtitle: "delicious local coupon card",
         media_file: "/julie's/Julies_Noodles.jpg",
         height_modifer: "420/470",
         layout: "text-left",

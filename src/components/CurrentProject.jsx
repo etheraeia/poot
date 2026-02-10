@@ -3,15 +3,15 @@ export function CurrentProject({ title, description, image }) {
   return (
     <div
       name="Current Project Frame"
-      className="flex flex-col px-8 md:px-0 md:flex-row justify-center items-center overflow-hidden relative gap-4"
+      className="flex flex-col px-4 md:px-0 md:flex-row justify-center items-center overflow-hidden relative gap-4"
     >
       <div className="flex flex-col md:px-8 md:pl-8 w-full justify-start relative gap-10">
-        <div className="flex flex-col w-full text-6xl md:text-[5.6vw] font-thin text-left text-[#fffbf1] ">
+        <div className="flex flex-col w-full text-7xl md:text-[8dvw] font-thin text-left text-[#fffbf1] ">
           <p style={{ fontFamily: "ivypresto-display, serif" }}>
             Currently
           </p>
           <p style={{ fontFamily: "ivypresto-display, serif" }}>
-            ideating:
+            reimagining:
           </p>
         </div>
         <div className="flex flex-col overflow-hidden items-start relative gap-4 font-light text-left text-[#ffffff]">
