@@ -3,9 +3,9 @@ export function CurrentProject({ title, description, image }) {
   return (
     <div
       name="Current Project Frame"
-      className="flex flex-col px-4 md:px-0 md:flex-row justify-center items-center overflow-hidden relative gap-4"
+      className="flex flex-wrap px-4 md:px-0 justify-center items-center overflow-hidden relative gap-4"
     >
-      <div className="flex flex-col md:px-8 md:pl-8 w-full justify-start relative gap-10">
+      <div className="flex flex-1 flex-col md:px-8 md:pl-8 w-full justify-start relative gap-10 md:min-w-[540px]">
         <div className="flex flex-col w-full text-7xl md:text-[8dvw] font-thin text-left text-[#fffbf1] ">
           <p style={{ fontFamily: "ivypresto-display, serif" }}>
             Currently
@@ -29,7 +29,7 @@ export function CurrentProject({ title, description, image }) {
           </p>
         </div>
       </div>
-      <img src={image} className="h-[48vh] md:h-[72vh] w-full object-cover object-left rounded-lg md:rounded-l-lg" />
+      <img src={image} className="flex-1 w-full md:min-w-[540px] h-[48vh] md:h-[72vh] w-full object-cover object-left rounded-lg md:rounded-l-lg" />
     </div>
   );
 }

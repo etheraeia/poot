@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export default function About() {
-  useEffect(() => {
-    document.body.className = "bg-[#fffbf1]";
-  }, []);
+  // useEffect(() => {
+  //   document.body.className = "bg-[#fffbf1]";
+  // }, []);
   return (
     <div
       className="flex justify-center items-start md:items-center h-auto md:h-full py-12"

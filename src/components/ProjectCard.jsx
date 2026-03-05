@@ -23,6 +23,7 @@ export function ProjectCard({
           autoPlay
           loop
           muted
+          playsInline
           className="w-full h-full"
         />
       ) : (

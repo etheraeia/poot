@@ -41,7 +41,7 @@ export default function NavBar() {
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 461.92 751.55"
-          className={`w-[42.8px] h-[42.8px] md:min-w-[42.8px] md:min-h-[42.8px] md:w-[2.8vw] md:h-[2.8vw] ${navLogoColor}`}
+          className={`w-[42.8px] h-[42.8px] ${navLogoColor} md:min-w-[42.8px] md:min-h-[42.8px] md:w-[2.8vw] md:h-[2.8vw]`}
         >
           <path
             d="M355.39,682.7l-226.14-117.09c-6.85-3.55-11.15-10.62-11.15-18.34V76.32c0-3.5,3.52-5.89,6.78-4.61l107.92,42.62c2.5.99,4.8,2.42,6.78,4.24l18.11,16.61c2.88,2.64,7.11,3.21,10.58,1.41,19.14-9.91,80.39-41.64,101.33-52.49,3.45-1.79,4.06-6.46,1.2-9.08l-18.19-16.69c-1.43-1.31-3.02-2.43-4.75-3.32L246.05,2.31c-5.95-3.08-13.03-3.08-18.99,0L11.15,114.1c-6.85,3.55-11.15,10.62-11.15,18.34v486.68c0,7.72,4.3,14.79,11.15,18.34l215.91,111.79c5.95,3.08,13.03,3.08,18.99,0l109.33-56.61c4.03-2.09,4.03-7.85,0-9.93Z"
@@ -75,7 +75,7 @@ export default function NavBar() {
             aria-haspopup="true"
             aria-expanded={dropdownOpen && show}
             onMouseEnter={() => setDropdownOpen(show)}
-            className={`group transition-colors hover:underline`}
+            className={`transition-colors group hover:underline`}
           >
             WORK
           </p>
@@ -83,14 +83,12 @@ export default function NavBar() {
       </div>
       {/* DROPDOWN */}
       <div
-        className={`pt-15 absolute top-0 right-2 -z-100 grow ${dropdownOpen ? "pointer-events-auto" : "pointer-events-none"}`}
         onMouseEnter={() => setDropdownOpen(dropdownOpen && show)}
         onMouseOver={() => setDropdownOpen(dropdownOpen && show)}
         onMouseLeave={() => setDropdownOpen(false)}
+        className={`pt-15 absolute top-0 sm:top-1 md:top-5 right-2 -z-100 grow ${dropdownOpen ? "pointer-events-auto" : "pointer-events-none"}`}
       >
-        <div 
-        className={`overflow-hidden`}
-        >
+        <div className={`overflow-hidden`}>
           <div
             className={`flex flex-col transition-all duration-500 ${dropdownOpen ? "translate-y-0 " : "-translate-y-[100%]"}`}
           >
@@ -98,13 +96,13 @@ export default function NavBar() {
             <div className="flex w-full px-9 justify-end">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16.977"
-                height="17.713"
-                viewBox="0 0 16.977 17.713"
+                width="30"
+                height="15"
+                viewBox="0 0 138.949 69.474"
                 className="block"
               >
-                <polygon
-                  points="16.977 17.713 8.488 0 0 17.713 16.977 17.713"
+                <path
+                  d="M0,69.474C27.79,69.474,69.474,27.79,69.474,0c0,27.79,41.685,69.474,69.474,69.474H0Z"
                   className={`${dropdownBgColor}`}
                 />
               </svg>
@@ -117,7 +115,7 @@ export default function NavBar() {
                   key={p.url_name}
                   to={p.url_name}
                   style={{ fontFamily: "IBM Plex Mono" }}
-                  className={`block py-0.5 md:py-0 text-xl tracking-tighter font-light ${dropdownTextColor} md:text-[1.2vw] ${p.url_name == location.pathname ? "underline" : "hover:underline"}`}
+                  className={`block py-0.5 text-xl tracking-tighter font-light ${dropdownTextColor} md:py-0 md:text-[1.2vw] ${p.url_name == location.pathname ? "underline" : "hover:underline"}`}
                 >
                   {p.index} {p.title}
                 </TransitionLink>
