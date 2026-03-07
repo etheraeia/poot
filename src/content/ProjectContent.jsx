@@ -145,7 +145,7 @@ export const projects = [
         subtitle: "delicious local coupon card",
         media_file: "/julie's/Julies_Noodles.jpg",
         height_modifer: "420/470",
-        layout: "text-left",
+        layout: "image-left",
         // project page stuff
         page_type: "project overview",
         url_name: "/julies-noodles",
@@ -176,7 +176,7 @@ export const projects = [
         subtitle: "pixel typeface for a game about crabs and words",
         media_file: "/Exoterminal/Exoterminal.png",
         height_modifer: "393/480",
-        layout: "image-left",
+        layout: "text-right",
         // project page stuff
         page_type: "project overview",
         url_name: "/exoterminal",
@@ -208,7 +208,7 @@ export const projects = [
         subtitle: "experiments in modular blackletter",
         media_file: "/Rotun/Rotun_VIDEO.mp4",
         height_modifer: "587/470",
-        layout: "text-right",
+        layout: "image-right",
         // project page stuff
         page_type: "project overview",
         url_name: "/rotun",
@@ -238,7 +238,7 @@ export const projects = [
         subtitle: "book about typography, memes, and designers",
         media_file: "/me when the meme/Me_when_the_meme_got_type.png",
         height_modifer: "9/16",
-        layout: "image-right",
+        layout: "text-left",
         // project page stuff
         page_type: "project overview",
         url_name: "/me-when-the-meme-got-type-in-it",
