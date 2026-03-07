@@ -25,9 +25,9 @@ function useIsVisible(ref) {
 export default function Home() {
   const [pastWorkLayout, setPastWorkLayout] = useState("default");
 
-  // useEffect(() => {
-  //   document.body.className = "bg-[#fffbf1]";
-  // }, []);
+  useEffect(() => {
+    document.body.className = "bg-[#fffbf1]";
+  }, []);
   const ref1 = useRef();
   const isVisible1 = useIsVisible(ref1);
   const ref2 = useRef();
