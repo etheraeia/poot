@@ -1,16 +1,31 @@
 import { projects } from "../content/ProjectContent";
 import { useLocation } from "react-router-dom";
 import Pdf from "/CW_resume.pdf";
-// onResumeClick(); {
-//   window.open(Pdf);
-// }
+import { useEffect, useRef } from "react";
 
 export function Footer() {
   const location = useLocation();
   const currentProject = projects.find((p) => p.url_name === location.pathname);
   const footerTextColor = currentProject?.drop_text_color || "text-[#fefbf2]";
   const footerBgColor = currentProject?.drop_bg_color || "bg-[#0c2fd8]";
-  // ${(location.pathname === "/") || (location.pathname === "/about") ? "text-[#ffffff]" : drop_text_color} ${(location.pathname === "/") || (location.pathname === "/about") ? "bg-[#0c2fd8]" : drop_bg_color}
+
+  const lastScrollY = useRef(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const backgroundColorFromFooter = footerBgColor.substring(4, 11);
+      const backgroundColorFromPage = currentProject?.background_color?.substring(4, 11) || "#fffbf1";
+      // const scrollingDown = window.scrollY >= lastScrollY.current;
+      const pageEnd = document.body.scrollHeight - window.innerHeight;
+      if (window.scrollY >= pageEnd - 100) {
+        document.body.style.backgroundColor = backgroundColorFromFooter;
+      } else {
+        document.body.style.backgroundColor = backgroundColorFromPage;
+      }
+      lastScrollY.current = window.scrollY;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [footerBgColor]);
 
   return (
     <div

@@ -6,7 +6,7 @@ export default function About() {
   }, []);
   return (
     <div
-      className="flex justify-center items-start md:items-center h-auto md:h-full py-12"
+      className="flex justify-center bg-[#fffbf1] items-start md:items-center h-auto md:h-full py-12"
     >
       <div
         className="flex flex-col md:flex-row justify-start items-end md:items-center w-full relative overflow-hidden gap-8 md:gap-12 pt-6 px-8"

@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { TransitionLink } from "./TransitionLink";
 import { projects } from "../content/ProjectContent";
 
 export default function NavBar() {
   const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShow(window.scrollY <= lastScrollY || window.scrollY < 100);
-      setLastScrollY(window.scrollY);
+      setShow(window.scrollY <= lastScrollY.current || window.scrollY < 100);
+      lastScrollY.current = window.scrollY;
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -86,14 +86,14 @@ export default function NavBar() {
         onMouseEnter={() => setDropdownOpen(dropdownOpen && show)}
         onMouseOver={() => setDropdownOpen(dropdownOpen && show)}
         onMouseLeave={() => setDropdownOpen(false)}
-        className={`pt-15 absolute top-0 sm:top-1 md:top-5 right-2 -z-100 grow ${dropdownOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`absolute w-[95vw] sm:w-fit left-[50%] sm:left-auto sm:right-2 translate-x-[-50%] sm:translate-x-0 top-13 -z-100 grow ${dropdownOpen ? "pointer-events-auto" : "pointer-events-none"}`}
       >
         <div className={`overflow-hidden`}>
           <div
             className={`flex flex-col transition-all duration-500 ${dropdownOpen ? "translate-y-0 " : "-translate-y-[100%]"}`}
           >
             {/* <div className="w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-b-16 border-b-blue-500"></div> */}
-            <div className="flex w-full px-9 justify-end">
+            <div className="flex w-full pr-6 sm:pr-7 justify-end">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"

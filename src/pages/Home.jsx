@@ -89,7 +89,7 @@ export default function Home() {
         </div>
         <div
           ref={ref2}
-          className={`flex flex-col w-full py-20 transition-opacity ease-in duration-1000 gap-8 md:gap-0 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
+          className={`flex flex-col w-full py-20 bg-[#fffbf1] transition-opacity ease-in duration-1000 gap-8 md:gap-0 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
         >
           <div>
             <div className="flex flex-row justify-between items-center">

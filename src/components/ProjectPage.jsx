@@ -148,14 +148,14 @@ export function ProjectPage({
   // useEffect(() => {
   //   // 1. Update the meta theme-color (controls the top overscroll/address bar)
   //   let metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    
+
   //   // Create it if it doesn't exist in your index.html
   //   if (!metaThemeColor) {
   //     metaThemeColor = document.createElement('meta');
   //     metaThemeColor.name = "theme-color";
   //     document.head.appendChild(metaThemeColor);
   //   }
-    
+
   //   const previousThemeColor = metaThemeColor.getAttribute('content');
   //   metaThemeColor.setAttribute('content', background_hex);
 
@@ -172,8 +172,8 @@ export function ProjectPage({
   //   };
   // }, [background_hex]);
   // useEffect(() => {
-    // document.body.className = background_color;
-    // document.head.querySelector('meta[name="theme-color"]').setAttribute("content", background_color.substring(4, 11));
+  // document.body.className = background_color;
+  // document.head.querySelector('meta[name="theme-color"]').setAttribute("content", background_color.substring(4, 11));
   // }, [background_color]);
   const nextProject = projects.find(
     (p) => p.index === (parseInt(index) + 1).toString().padStart(2, "0"),
@@ -269,7 +269,7 @@ export function ProjectPage({
         </div>
       </div>
       <div
-        className={`flex flex-col overflow-x-visible w-[100vw] py-6 px-[10vw] ${background_color} gap-6 justify-end items-end self-stretch relative md:px-[20vw]`}
+        className={`flex flex-col overflow-x-visible w-[100vw] px-[10vw] ${background_color} gap-6 justify-end items-end self-stretch relative md:px-[20vw]`}
       >
         {/* SLIDE 3 */}
         {page_type === "project overview" && (
@@ -417,7 +417,7 @@ export function ProjectPage({
               </p>
               {figma_prototype && (
                 <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-2">
-                  {url_name === "/adtalk" && (
+                  {window.innerWidth > 720 && url_name === "/adtalk" && (
                     <div className="hidden overflow-hidden h-[53vw] items-center self-center md:flex md:h-[40vw]">
                       <iframe
                         src={figma_prototype}
@@ -426,7 +426,7 @@ export function ProjectPage({
                       ></iframe>
                     </div>
                   )}
-                  {url_name === "/cradlelist" && (
+                  {window.innerWidth > 720 && url_name === "/cradlelist" && (
                     <div className="hidden overflow-hidden h-[46vw] items-center self-center md:flex md:h-[34vw]">
                       <iframe
                         src={figma_prototype}
@@ -435,7 +435,7 @@ export function ProjectPage({
                       ></iframe>
                     </div>
                   )}
-                  {url_name === "/facebook-homepage-customization" && (
+                  {window.innerWidth > 720 && url_name === "/facebook-homepage-customization" && (
                     <div className="hidden overflow-hidden h-[78vh] items-center self-center md:flex">
                       <iframe
                         src={figma_prototype}
@@ -455,7 +455,7 @@ export function ProjectPage({
                     style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
                     className={`text-lg font-light tracking-tighter text-left underline self-stretch ${body_text_color} md:text-[1.1vw]`}
                   >
-                    Check out the interactive prototype!
+                    Check out the interactive prototype on Figma!
                   </a>
                 </div>
               )}
