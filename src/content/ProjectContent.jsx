@@ -35,7 +35,7 @@ export const projects = [
         process_image_1: "/adtalk/AdTalk_sketches.png",
         process_image_2: "/adtalk/AdTalk_branding and design system.png",
         process_left_image: "/adtalk/AdTalk_process-left.png",
-        process_right_image: "/adtalk/AdTalk_process-right.png",
+        process_right_image: "/adtalk/AdTalk_process-3.png",
         figma_prototype: "https://embed.figma.com/proto/lbgPbHPftks14jWKKBKBAs/Untitled?page-id=0%3A1&node-id=0-4274&p=f&viewport=430%2C398%2C0.13&scaling=scale-down&content-scaling=fixed&starting-point-node-id=0%3A4274&embed-host=share",
         //style stuff
         page_layout: "wide",

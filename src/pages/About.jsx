@@ -30,8 +30,7 @@ export default function About() {
               style={{ fontFamily: "epilogue, sans-serif" }}
               className="self-stretch text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
-              outside of school, i've worked with student organizations and startups, and
-              have experience in ux/ui, merch design, and layout and publication.
+              outside of school, i’ve built and shipped products for startups from the ground up, and i have experience in digital product design, visual design for digital experiences, and content strategy. 
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}

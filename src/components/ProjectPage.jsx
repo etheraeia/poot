@@ -126,7 +126,7 @@ export function ProjectPage({
   drop_bg_color,
   caption,
   elaboration,
-  process_left_image,
+  process_image_3,
   process_right_image,
   problem_text,
   research_text_1,
@@ -274,7 +274,7 @@ export function ProjectPage({
         {/* SLIDE 3 */}
         {page_type === "project overview" && (
           <ImageHalfNHalf
-            left_image={process_left_image}
+            left_image={process_image_3}
             right_image={process_right_image}
           />
         )}
@@ -364,32 +364,38 @@ export function ProjectPage({
               >
                 The Design
               </p>
+              <div className="flex flex-wrap gap-6">
               <p
                 style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`w-full text-lg font-light tracking-tighter text-left ${body_text_color} md:text-[1.1vw]`}
+                className={`w-full flex-1 min-w-[300px] text-lg font-light tracking-tighter text-left ${body_text_color} md:text-[1.1vw]`}
               >
                 {iteration_text_1}
               </p>
+              <div className="flex-1 min-w-[300px]">
               <Zoom>
                 <img
                   src={process_image_1}
                   className="object-cover w-full rounded-md"
                 />
               </Zoom>
+              </div>
+              </div>
               {iteration_text_2 && (
-                <div className="flex flex-col overflow-hidden justify-start items-stretch relative gap-6">
-                  <p
-                    style={{ fontFamily: "epilogue, sans-serif" }}
-                    className={`w-full text-lg font-light tracking-tighter text-left ${body_text_color} md:text-[1.1vw]`}
-                  >
-                    {iteration_text_2}
-                  </p>
+                <div className="flex flex-wrap overflow-hidden justify-start items-stretch relative gap-6">
+                  <div className="flex-1 min-w-[300px]">
                   <Zoom>
                     <img
                       src={process_image_2}
                       className="object-cover w-full rounded-md"
                     />
                   </Zoom>
+                  </div>
+                  <p
+                    style={{ fontFamily: "epilogue, sans-serif" }}
+                    className={`w-full flex-1 min-w-[300px] text-lg font-light tracking-tighter text-left ${body_text_color} md:text-[1.1vw]`}
+                  >
+                    {iteration_text_2}
+                  </p>
                 </div>
               )}
               {iteration_text_3 && (
@@ -400,12 +406,14 @@ export function ProjectPage({
                   >
                     {iteration_text_3}
                   </p>
+                  <Zoom>
+                    <img
+                      src={process_right_image}
+                      className="object-cover w-full rounded-md"
+                    />
+                  </Zoom>
                 </div>
               )}
-              <ImageHalfNHalf
-                left_image={process_left_image}
-                right_image={process_right_image}
-              />
             </div>
             <div className={`h-0.5 w-full ${drop_bg_color}`} />
             <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-4">
