@@ -1,4 +1,3 @@
-import { useEffect, useState, useRef } from "react";
 import { projects } from "../content/ProjectContent";
 import { TransitionLink } from "./TransitionLink";
 import { Footer } from "./Footer";
@@ -89,22 +88,6 @@ function ProjectNavigationCard({ project, body_text_color, type }) {
   );
 }
 
-function useIsVisible(ref) {
-  const [isIntersecting, setIntersecting] = useState(false);
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setIntersecting(entry.isIntersecting);
-    });
-
-    observer.observe(ref.current);
-    return () => {
-      observer.disconnect();
-    };
-  }, [ref]);
-
-  return isIntersecting;
-}
-
 export function ProjectPage({
   index,
   page_type,
@@ -126,7 +109,7 @@ export function ProjectPage({
   drop_bg_color,
   caption,
   elaboration,
-  process_image_3,
+  process_left_image,
   process_right_image,
   problem_text,
   research_text_1,
@@ -193,8 +176,6 @@ export function ProjectPage({
     title: "Home",
     index: "",
   };
-  const ref1 = useRef();
-  const isVisible1 = useIsVisible(ref1);
 
   return (
     <div
@@ -217,8 +198,7 @@ export function ProjectPage({
           {intro_text}
         </p>
         <div
-          ref={ref1}
-          className={`flex flex-col gap-6 justify-end items-end self-stretch transition-opacity ease-in duration-1000 ${isVisible1 ? "opacity-100" : "opacity-0"}`}
+          className={`flex flex-col gap-6 justify-end items-end self-stretch`}
         >
           <div
             style={{ fontFamily: "epilogue, sans-serif" }}
@@ -274,14 +254,15 @@ export function ProjectPage({
         {/* SLIDE 3 */}
         {page_type === "project overview" && (
           <ImageHalfNHalf
-            left_image={process_image_3}
+            left_image={process_left_image}
             right_image={process_right_image}
           />
         )}
         {page_type === "case study" && (
           <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-6">
             <div className={`h-0.5 w-full ${drop_bg_color}`} />
-            <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+            <div 
+            className={`flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6`}>
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
                 className={`text-3xl font-thin text-left self-stretch ${intro_text_color} md:text-[2vw]`}
@@ -296,7 +277,8 @@ export function ProjectPage({
               </p>
             </div>
             <div className={`h-0.5 w-full ${drop_bg_color}`} />
-            <div className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+            <div 
+            className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
                 className={`text-3xl font-thin text-left self-stretch ${intro_text_color} md:text-[2vw]`}
