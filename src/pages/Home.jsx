@@ -67,9 +67,9 @@ export default function Home() {
             className={`transition-opacity ease-in duration-1000 ${isVisible1 ? "opacity-100" : "opacity-0"}`}
           >
             <CurrentProject
-              title="Austin Parks and Recreation Signage"
-              description="collaborating with austin parks and recreation to redefine sustainability storytelling in austin parks at wkrm, a student-run, faculty-led design studio."
-              image="wkrm.JPG"
+              title="The Greenback Club"
+          description="A Denver-based startup reducing the environmental impact of the cannabis industry with a consumer-first rewards platform."
+          image="Greenback.png"
             />
           </div>
         </div>
