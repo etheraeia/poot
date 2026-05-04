@@ -103,6 +103,7 @@ export function ProjectPage({
   left_image,
   right_image,
   page_layout,
+  process_layout,
   intro_text_color,
   body_text_color,
   background_color,
@@ -125,7 +126,9 @@ export function ProjectPage({
   research_image_3,
   process_image_1,
   process_image_2,
-  figma_prototype,
+  prototype,
+  product,
+  product_image,
 }) {
   // var background_hex = background_color.substring(4, 11);
   // useEffect(() => {
@@ -261,8 +264,8 @@ export function ProjectPage({
         {page_type === "case study" && (
           <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-6">
             <div className={`h-0.5 w-full ${drop_bg_color}`} />
-            <div 
-            className={`flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6`}>
+            <div
+              className={`flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6`}>
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
                 className={`text-3xl font-thin text-left self-stretch ${intro_text_color} md:text-[2vw]`}
@@ -277,8 +280,8 @@ export function ProjectPage({
               </p>
             </div>
             <div className={`h-0.5 w-full ${drop_bg_color}`} />
-            <div 
-            className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
+            <div
+              className="flex flex-col overflow-hidden justify-start items-start self-stretch relative gap-6">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
                 className={`text-3xl font-thin text-left self-stretch ${intro_text_color} md:text-[2vw]`}
@@ -347,30 +350,30 @@ export function ProjectPage({
                 The Design
               </p>
               <div className="flex flex-wrap gap-6">
-              <p
-                style={{ fontFamily: "epilogue, sans-serif" }}
-                className={`w-full flex-1 min-w-[300px] text-lg font-light tracking-tighter text-left ${body_text_color} md:text-[1.1vw]`}
-              >
-                {iteration_text_1}
-              </p>
-              <div className="flex-1 min-w-[300px]">
-              <Zoom>
-                <img
-                  src={process_image_1}
-                  className="object-cover w-full rounded-md"
-                />
-              </Zoom>
-              </div>
+                <p
+                  style={{ fontFamily: "epilogue, sans-serif" }}
+                  className={`w-full flex-1 min-w-[300px] text-lg font-light tracking-tighter text-left ${body_text_color} md:text-[1.1vw]`}
+                >
+                  {iteration_text_1}
+                </p>
+                <div className="flex-1 min-w-[300px]">
+                  <Zoom>
+                    <img
+                      src={process_image_1}
+                      className="object-cover w-full rounded-md"
+                    />
+                  </Zoom>
+                </div>
               </div>
               {iteration_text_2 && (
                 <div className="flex flex-wrap overflow-hidden justify-start items-stretch relative gap-6">
                   <div className="flex-1 min-w-[300px]">
-                  <Zoom>
-                    <img
-                      src={process_image_2}
-                      className="object-cover w-full rounded-md"
-                    />
-                  </Zoom>
+                    <Zoom>
+                      <img
+                        src={process_image_2}
+                        className="object-cover w-full rounded-md"
+                      />
+                    </Zoom>
                   </div>
                   <p
                     style={{ fontFamily: "epilogue, sans-serif" }}
@@ -388,12 +391,20 @@ export function ProjectPage({
                   >
                     {iteration_text_3}
                   </p>
-                  <Zoom>
-                    <img
-                      src={process_right_image}
-                      className="object-cover w-full rounded-md"
-                    />
-                  </Zoom>
+                  {process_layout === "wide" && (
+                    <Zoom>
+                      <img
+                        src={process_right_image}
+                        className="object-cover w-full rounded-md"
+                      />
+                    </Zoom>
+                  )}
+                  {process_layout === "halfnhalf" && (
+                    <ImageHalfNHalf left_image={process_left_image} right_image={process_right_image} />
+                  )}
+                  {process_layout === "thirds" && (
+                    <ImageThirds left_image={process_left_image} right_image={right_image} />
+                  )}
                 </div>
               )}
             </div>
@@ -405,12 +416,12 @@ export function ProjectPage({
               >
                 The Outcome
               </p>
-              {figma_prototype && (
+              {prototype && (
                 <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-2">
                   {window.innerWidth > 720 && url_name === "/adtalk" && (
                     <div className="hidden overflow-hidden h-[53vw] items-center self-center md:flex md:h-[40vw]">
                       <iframe
-                        src={figma_prototype}
+                        src={prototype}
                         allowfullscreen
                         className="w-[calc(100px+80vw)] h-[102vh] pt-17 md:w-[calc(100px+60vw)]"
                       ></iframe>
@@ -419,7 +430,7 @@ export function ProjectPage({
                   {window.innerWidth > 720 && url_name === "/cradlelist" && (
                     <div className="hidden overflow-hidden h-[46vw] items-center self-center md:flex md:h-[34vw]">
                       <iframe
-                        src={figma_prototype}
+                        src={prototype}
                         allowfullscreen
                         className="w-[calc(100px+80vw)] h-[100vh] pt-17 md:w-[calc(100px+60vw)]"
                       ></iframe>
@@ -428,7 +439,7 @@ export function ProjectPage({
                   {window.innerWidth > 720 && url_name === "/facebook-homepage-customization" && (
                     <div className="hidden overflow-hidden h-[78vh] items-center self-center md:flex">
                       <iframe
-                        src={figma_prototype}
+                        src={prototype}
                         allowfullscreen
                         className="w-[calc(100px+100vw-(200vw/9))] h-[100vh] pt-17 md:w-[calc(100px+100vw-(200vw/4.5))]"
                       ></iframe>
@@ -441,12 +452,35 @@ export function ProjectPage({
                     Interact with the Figma prototype!
                   </p>
                   <a
-                    href={figma_prototype}
+                    href={prototype}
                     style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
                     className={`text-lg font-light tracking-tighter text-left underline self-stretch ${body_text_color} md:text-[1.1vw]`}
                   >
                     Check out the interactive prototype on Figma!
                   </a>
+                </div>
+              )}
+              {product && (
+                <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-2">
+                  {url_name === "/austin-parks-signs" && (
+                    <div classname="flex gap-4">
+                      <div className="overflow-hidden items-center self-center">
+                        <Zoom>
+                          <img
+                            src={product_image}
+                            className="object-cover w-full rounded-md"
+                          />
+                        </Zoom>
+                      </div>
+                      <a
+                        href={product}
+                        style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
+                        className={`text-lg font-light tracking-tighter text-left underline self-stretch ${body_text_color} md:text-[1.1vw]`}
+                      >
+                        Check out the finished signage guidelines!
+                      </a>
+                    </div>
+                  )}
                 </div>
               )}
               <p
