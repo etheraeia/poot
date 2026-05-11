@@ -453,6 +453,8 @@ export function ProjectPage({
                   </p>
                   <a
                     href={prototype}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
                     className={`text-lg font-light tracking-tighter text-left underline self-stretch ${body_text_color} md:text-[1.1vw]`}
                   >
@@ -461,24 +463,26 @@ export function ProjectPage({
                 </div>
               )}
               {product && (
-                <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-2">
+                <div>
                   {url_name === "/austin-parks-signs" && (
-                    <div classname="flex gap-4">
-                      <div className="overflow-hidden items-center self-center">
+                    <div className="flex flex-col overflow-x-visible justify-start items-start self-stretch relative gap-2">
                         <Zoom>
                           <img
                             src={product_image}
                             className="object-cover w-full rounded-md"
                           />
                         </Zoom>
-                      </div>
+                      {/* <div> */}
                       <a
                         href={product}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         style={{ fontFamily: "IBM Plex Mono, sans-serif" }}
                         className={`text-lg font-light tracking-tighter text-left underline self-stretch ${body_text_color} md:text-[1.1vw]`}
                       >
                         Check out the finished signage guidelines!
                       </a>
+                      {/* </div> */}
                     </div>
                   )}
                 </div>
