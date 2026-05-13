@@ -3,7 +3,7 @@ export const projects = [
         index: "01",
         title: "Austin Parks and Recreation Signage",
         subtitle: "scalable content system for park signage",
-        media_file: "/wkrm/Park_signage.png",
+        media_file: "/wkrm/Park_signage.jpg",
         height_modifer: "1080/1920",
         layout: "text-left",
         // primary project page content
@@ -28,8 +28,8 @@ export const projects = [
         iteration_text_1: "After writing our first story to create mockups with, we wireframed several layouts based on the sign form factors team’s prototypes. These initial wireframes included a graphic content module alongside the text content, but this graphic content module was scrapped due to scope and future scalability issues.",
         iteration_text_2: "The previous cohort used Sofia as their typeface for sign content. Though the simplicity of the geometric sans-serif suited our needs, we opted to switch to Greycliff for better readability, as well as better harmony with the sign icons. We also explored color options different from the previously defined palette, and the client showed interest in options using the City of Austin brand colors. We ended up using the City of Austin Logo Blue for educational sign backgrounds and the Cyan for operational or maintenance sign backgrounds, paired with white text.",
         iteration_text_3: "Once we created our templates for signage content, I condensed our blackboard notes into a ruleset governing grammar, length, tone, and rhetorical strategy. We then split up the stories, each team member writing content for one of the four story topics - I wrote Green Stormwater Infrastructure stories. Our written content guidelines allowed us to quickly write 23 stories with minimal editing needed for consistency. These 23 stories were then sorted into a spreadsheet displaying content modules, as well as a guide to selecting modules and sign templates.",
-        reflections_text: "This was my first time working on a B2B product, which required a bit of a shift for me. I learned to create easily legible data visualizations, as well as how to maintain usability and legibility without being able to compromise on detail. ",
-        results_text: "Once we finished, the dashboard was handed off to the development team, who were able to build the MVP and deliver it to the founder. AdTalk is still being worked on, so I won’t be able to see the results until launch. However, our product was well received at the Texas Convergent Forge Showcase.",
+        reflections_text: "This was the most interdependent project I’ve worked on with regards to crossfunctional team collaboration, and I have to say I think we pulled it off well! I really enjoyed not only learning how to define a system like this and design written content alongside visual, but also learning how to work smoothly with so many different teams and moving parts.",
+        results_text: "We showcased our final system and prototypes at a presentation attended by over 25 city and Parks stakeholders and placemaking professionals, and passed on our documentation to Austin Parks and Recreation. Our work was received with great excitement, and though it still needs to make it through approval and production, might be seen in Austin parks sometime soon!",
         //case study media
         research_image_1: "/wkrm/Park_signage_research.jpeg",
         research_image_2: "/wkrm/Park_signage_framework.jpeg",
