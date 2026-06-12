@@ -11,7 +11,7 @@ export function CurrentProject({ title, description, image }) {
             Currently
           </p>
           <p style={{ fontFamily: "ivypresto-display, serif" }}>
-            reimagining:
+            synthesizing:
           </p>
         </div>
         <div className="flex flex-col overflow-hidden items-start relative gap-4 font-light text-left text-[#ffffff]">
