@@ -92,10 +92,10 @@ export default function Home() {
           className={`flex flex-col w-full py-20 bg-[#fffbf1] transition-opacity ease-in duration-1000 gap-8 md:gap-0 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
         >
           <div>
-            <div className="flex flex-row justify-between items-center">
+            <div className="flex flex-row justify-between items-center px-2.5">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
-                className={`text-7xl font-thin text-left text-[#1029b4] self-stretch px-2.5 md:text-[8dvw]`}
+                className={`text-7xl font-thin text-left text-[#1029b4] self-stretch md:text-[8dvw]`}
               >
                 Past Work
               </p>

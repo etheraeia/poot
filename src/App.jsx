@@ -8,6 +8,7 @@ import { ProjectPage } from "./components/ProjectPage";
 import { projects } from "./content/ProjectContent";
 import TransitionProvider from "./components/TransitionProvider";
 import { Footer } from "./components/Footer";
+import NotFound from './components/NotFound';
 
 export default function App() {
 
@@ -34,6 +35,7 @@ export default function App() {
                 }
               />
             ))}
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </main>
