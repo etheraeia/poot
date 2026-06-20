@@ -23,21 +23,19 @@ export default function About() {
               style={{ fontFamily: "ivypresto-display, serif" }}
               className="self-stretch text-5xl md:text-[3vw] font-thin text-left text-[#0c2fd8]"
             >
-              Hi! I'm Corrine Wang, a design student at the University of Texas
-              at Austin who loves tinkering with typography.
+              Hi! I’m Corrine Wang, a product designer studying at the University of Texas at Austin who loves tinkering with typography. 
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
               className="self-stretch text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
-              outside of school, i’ve built and shipped products for startups from the ground up, and i have experience in digital product design, visual design for digital experiences, and content strategy. 
+              i’ve worked in startup, corporate, and studio environments, and i specialize in building and wrangling design systems. i have strong foundations in design research, graphic design, and content design, as well as experience in front-end development and leveraging ai to streamline my work.
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
               className="self-stretch text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
-              as a designer, i strive to marry function with joy, evoking a sense of magic and discovery
-              while addressing unseen perspectives and populations.
+              as a designer, i strive to marry function with joy, evoking a sense of magic and discovery while addressing unseen perspectives and populations.
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}

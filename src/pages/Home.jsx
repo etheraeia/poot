@@ -68,7 +68,7 @@ export default function Home() {
           >
             <CurrentProject
               title="STERIS"
-          description="Collecting, auditing, and polishing interface components and patterns to create a cohesive experience across the STERIS Procedural product portfolio."
+          description="Collecting, auditing, and polishing interface components and patterns to create a design system that ensures visual cohesion within STERIS procedural products and reduces workflow friction for designers, devs, and doctors alike."
           image="STERIS.JPG"
             />
           </div>

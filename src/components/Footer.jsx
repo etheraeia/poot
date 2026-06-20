@@ -9,6 +9,11 @@ export function Footer() {
   const footerTextColor = currentProject?.drop_text_color || "text-[#fefbf2]";
   const footerBgColor = currentProject?.drop_bg_color || "bg-[#0c2fd8]";
 
+  const copyEmailToClipboard = async () => {
+    await navigator.clipboard.writeText("berry8053@gmail.com");
+    alert("email address copied!");
+  };
+
   const lastScrollY = useRef(0);
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +30,7 @@ export function Footer() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [footerBgColor]);
+  }, [footerBgColor, currentProject?.background_color]);
 
   return (
     <div
@@ -41,9 +46,9 @@ export function Footer() {
         RESUME
       </a>
       <p>|</p>
-      <a href="mailto:berry8053@gmail.com" className="hover:underline">
+      <button type="button" onClick={copyEmailToClipboard} className="hover:underline">
         MAIL
-      </a>
+      </button>
       <p>|</p>
       <a
         href="https://www.linkedin.com/in/corn-design/"
