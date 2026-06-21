@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { TransitionLink } from "./TransitionLink";
 
 const NotFound = () => (
-    <main className="flex flex-col min-h-screen bg-[url('./404_fishing.png')] bg-cover bg-center justify-center bg-[#fffbf1] gap-4 px-[15vw] items-end">
+    <main className="flex flex-col min-h-screen bg-[url('/404_fishing.png')] bg-cover bg-center justify-center bg-[#fffbf1] gap-4 px-[15vw] items-end">
         <p
             style={{ fontFamily: "IBM Plex Mono" }}
             className={`flex flex-col text-8xl text-right font-light tracking-tighter text-[#1029b4]`}
