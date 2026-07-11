@@ -36,40 +36,47 @@ export default function Home() {
   const isVisible3 = useIsVisible(ref3);
   const ref4 = useRef();
   const isVisible4 = useIsVisible(ref4);
+  const ref5 = useRef();
+  const isVisible5 = useIsVisible(ref5);
   return (
     <div className="scroll-container">
-      <HeroSection
-        firstName="Corrine"
-        lastName="Wang"
-        tagline="is two cats in a trenchcoat designing humanity a systematic, fish-eating future."
-        arrowSrc="arrow_curve_R.png"
-      />
+      <div
+        ref={ref1}
+        className={`transition-opacity ease-in delay-150 duration-1000 ${isVisible1 ? "opacity-100" : "opacity-0"}`}
+      >
+        <HeroSection
+          firstName="Corrine"
+          lastName="Wang"
+          tagline="is two cats in a trenchcoat designing humanity a systematic, fish-eating future."
+          arrowSrc="arrow_curve_R.png"
+        />
+      </div>
       <ScrollToTopButton />
       <div className="flex flex-col items-center">
-        <div className="w-full hidden md:block ">
+        <div className="hidden w-full md:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="138.949"
             height="69.474"
             viewBox="0 0 138.949 69.474"
-            className="absolute w-full bottom-10"
+            className="w-full absolute bottom-10"
           >
             <path
               d="M0,69.474C27.79,69.474,69.474,27.79,69.474,0c0,27.79,41.685,69.474,69.474,69.474H0Z"
               className="fill-[#1029b4]"
             />
           </svg>
-          <div className={`h-10 absolute w-full bottom-0 bg-[#1029b4]`} />
+          <div className={`h-10 w-full bg-[#1029b4] absolute bottom-0`} />
         </div>
-        <div className="flex h-[110vh] md:h-[125vh] bg-[#1029b4] items-center justify-center">
+        <div className="flex h-[110vh] bg-[#1029b4] items-center justify-center md:h-[125vh]">
           <div
-            ref={ref1}
-            className={`transition-opacity ease-in duration-1000 ${isVisible1 ? "opacity-100" : "opacity-0"}`}
+            ref={ref2}
+            className={`transition-opacity ease-in duration-1000 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
           >
             <CurrentProject
               title="Medtech Company Design System (Confidential)"
-          description="Collecting, auditing, and polishings interface components and patterns to create a design system. This design system ensures visual cohesion within operating room products and reduces workflow friction for designers, devs, and doctors alike."
-          image="medtech.JPG"
+              description="Collecting, auditing, and polishings interface components and patterns to create a design system. This design system ensures visual cohesion within operating room products and reduces workflow friction for designers, devs, and doctors alike."
+              image="medtech.JPG"
             />
           </div>
         </div>
@@ -79,7 +86,7 @@ export default function Home() {
             width="138.949"
             height="69.474"
             viewBox="0 0 138.949 69.474"
-            className="hidden md:block rotate-180"
+            className="hidden rotate-180 md:block"
           >
             <path
               d="M0,69.474C27.79,69.474,69.474,27.79,69.474,0c0,27.79,41.685,69.474,69.474,69.474H0Z"
@@ -88,22 +95,22 @@ export default function Home() {
           </svg>
         </div>
         <div
-          ref={ref2}
-          className={`flex flex-col w-full py-20 bg-[#fffbf1] transition-opacity ease-in duration-1000 gap-8 md:gap-0 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
+          ref={ref3}
+          className={`flex flex-col w-full py-20 bg-[#fffbf1] transition-opacity ease-in duration-1000 gap-8 md:gap-0 ${isVisible3 ? "opacity-100" : "opacity-0"}`}
         >
           <div>
-            <div className="flex flex-row justify-between items-center px-2.5">
+            <div className="flex flex-row px-2.5 justify-between items-end">
               <p
                 style={{ fontFamily: "ivypresto-display, serif" }}
                 className={`text-7xl font-thin text-left text-[#1029b4] self-stretch md:text-[8dvw]`}
               >
                 Past Work
               </p>
-              <div className="flex flex-row gap-2.5">
+              <div className="flex flex-row gap-2.5 mb-2">
                 <button
                   aria-label="Card view"
                   onClick={() => setPastWorkLayout("default")}
-                  className={`hidden h-[6vh] w-[8vh] pt-[1.1vh] p-[1.5vh] rounded-full cursor-pointer md:block ${pastWorkLayout === "list" ? "" : "bg-[#1029b4]"}`}
+                  className={`hidden h-[8vh] w-[10vh] pt-[1.1vh] pb-[1.5vh] px-[2vh]  rounded-full cursor-pointer md:block ${pastWorkLayout === "list" ? "" : "bg-[#1029b4]"}`}
                 >
                   <img
                     src={`${pastWorkLayout === "list" ? "Icon_card_b.png" : "Icon_card_w.png"}`}
@@ -114,7 +121,7 @@ export default function Home() {
                 <button
                   aria-label="List view"
                   onClick={() => setPastWorkLayout("list")}
-                  className={`hidden h-[6vh] w-[8vh] pt-[1.1vh] p-[1.5vh] rounded-full cursor-pointer md:block ${pastWorkLayout === "default" ? "" : "bg-[#1029b4]"}`}
+                  className={`hidden h-[8vh] w-[10vh] pt-[1.1vh] pb-[1.5vh] px-[2vh] rounded-full cursor-pointer md:block ${pastWorkLayout === "default" ? "" : "bg-[#1029b4]"}`}
                 >
                   <img
                     src={`${pastWorkLayout === "default" ? "Icon_list_b.png" : "Icon_list_w.png"}`}
@@ -127,14 +134,14 @@ export default function Home() {
             <div className="h-0.5 w-full bg-[#1029b4]" />
           </div>
           <section
-            ref={ref3}
-            className={`transition-opacity ease-in duration-500 ${isVisible3 ? "opacity-100" : "opacity-0"} ${pastWorkLayout === "default" ? "hidden md:block" : "hidden"}`}
+            ref={ref4}
+            className={`transition-opacity ease-in duration-500 ${isVisible4 ? "opacity-100" : "opacity-0"} ${pastWorkLayout === "default" ? "hidden md:block" : "hidden"}`}
           >
             <PastWork />
           </section>
           <section
-            ref={ref4}
-            className={`transition-opacity ease-in duration-500 ${isVisible4 ? "opacity-100" : "opacity-0"} ${pastWorkLayout === "default" ? "block md:hidden" : "block"}`}
+            ref={ref5}
+            className={`transition-opacity ease-in duration-500 ${isVisible5 ? "opacity-100" : "opacity-0"} ${pastWorkLayout === "default" ? "block md:hidden" : "block"}`}
           >
             <PastWorkList />
           </section>
