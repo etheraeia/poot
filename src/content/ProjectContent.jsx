@@ -2,7 +2,7 @@ export const projects = [
     {
         index: "01",
         title: "Austin Parks and Recreation Signage",
-        subtitle: "scalable content system for park signage",
+        subtitle: "scalable content system for educational park signage",
         media_file: "/wkrm/Park_signage.jpg",
         height_modifer: "1080/1920",
         layout: "text-left",
@@ -53,7 +53,7 @@ export const projects = [
     {
         index: "02",
         title: "AdTalk",
-        subtitle: "ai-powered marketing and analytics platform",
+        subtitle: "ai-powered marketing and analytics platform for convenience stores",
         media_file: "/adtalk/AdTalk.png",
         height_modifer: "1080/1920",
         layout: "text-right",

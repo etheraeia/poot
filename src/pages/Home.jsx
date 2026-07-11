@@ -41,7 +41,7 @@ export default function Home() {
       <HeroSection
         firstName="Corrine"
         lastName="Wang"
-        tagline="is two cats in a trenchcoat designing humanity a whiskered, fish-eating future."
+        tagline="is two cats in a trenchcoat designing humanity a systematic, fish-eating future."
         arrowSrc="arrow_curve_R.png"
       />
       <ScrollToTopButton />
@@ -68,7 +68,7 @@ export default function Home() {
           >
             <CurrentProject
               title="Medtech Company Design System (Confidential)"
-          description="Collecting, auditing, and polishings interface components and patterns to create a design system that ensures visual cohesion within operating room products and reduces workflow friction for designers, devs, and doctors alike."
+          description="Collecting, auditing, and polishings interface components and patterns to create a design system. This design system ensures visual cohesion within operating room products and reduces workflow friction for designers, devs, and doctors alike."
           image="medtech.JPG"
             />
           </div>
