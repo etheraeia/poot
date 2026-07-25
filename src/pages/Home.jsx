@@ -74,8 +74,8 @@ export default function Home() {
             className={`transition-opacity ease-in duration-1000 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
           >
             <CurrentProject
-              title="Medtech Company Design System (Confidential)"
-              description="Collecting, auditing, and polishings interface components and patterns to create a design system. This design system ensures visual cohesion within operating room products and reduces workflow friction for designers, devs, and doctors alike."
+              title="STERIS Procedural Design System"
+              description="Collecting, auditing, and polishing interface components and patterns to create a design system. This design system ensures visual cohesion within operating room products and reduces workflow friction for designers, devs, and doctors alike."
               image="medtech.JPG"
             />
           </div>

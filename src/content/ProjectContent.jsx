@@ -39,7 +39,7 @@ export const projects = [
         process_left_image: "/wkrm/Park_signage_content_rules.png",
         process_right_image: "/wkrm/Park_signage_content_spreadsheet.png",
         product_image: "/wkrm/Park_signage_mockups.jpg",
-        product: "https://sites.google.com/view/apardsitessignagelibrary/the-city-of-austin-parks-and-recreation-sites-signage?authuser=0",
+        product: "https://sites.google.com/view/sitessignagespecs/home",
         //style stuff
         page_layout: "wide",
         process_layout: "halfnhalf",
