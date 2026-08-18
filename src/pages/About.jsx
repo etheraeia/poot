@@ -29,7 +29,7 @@ export default function About() {
               style={{ fontFamily: "epilogue, sans-serif" }}
               className="self-stretch text-2xl md:text-[1.4vw] font-light tracking-tighter text-left text-[#19255c]"
             >
-              i’ve worked in startup, corporate, and studio environments, and i specialize in delivering polished, user-centric products built on systematic foundations. i have strong roots in design research, graphic design, and content design, as well as experience in front-end development and leveraging ai to streamline my work.
+              i’ve worked in startup, corporate, and studio environments, and i specialize in delivering polished, user-centric solutions built on systematic foundations. i have strong roots in design research, graphic design, and content design, as well as experience in front-end development and leveraging ai to streamline my work.
             </p>
             <p
               style={{ fontFamily: "epilogue, sans-serif" }}
