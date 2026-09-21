@@ -52,7 +52,7 @@ export default function Home() {
         />
       </div>
       <ScrollToTopButton />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col gap-0 items-center">
         <div className="hidden w-full md:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
