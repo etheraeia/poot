@@ -3,7 +3,7 @@ export const projects = [
         index: "01",
         title: "Austin Parks and Recreation Signage",
         subtitle: "scalable content system for educational park signage",
-        media_file: "/wkrm/Park_signage.jpg",
+        media_file: "/wkrm_parks/Park_signage.jpg",
         height_modifer: "1080/1920",
         layout: "text-left",
         // primary project page content
@@ -18,8 +18,8 @@ export const projects = [
         caption: "Content modules for educational signage.",
         elaboration: "Building off of a previous cohort’s conceptual work, my team defined a sign type framework and flexible content hierarchy, developed a visual design system including layout, typography, and color, composed content for 23 sustainability stories, and defined rules for written content. I led development of written content and written content guidelines and supported my teammates on visual design, while collaborating with cross-functional teams to ensure harmony between each component of the signage system.",
         //primary media
-        hero_image: "/wkrm/Park_signage_hero.png",
-        wide_image: "/wkrm/Park_signage_wide.png",
+        hero_image: "/wkrm_parks/Park_signage_hero.png",
+        wide_image: "/wkrm_parks/Park_signage_wide.png",
         //case study content
         problem_text: "Although sustainability stories are being told through educational signage in Austin parks, these stories often go unnoticed. How might we tell sustainability stories with a budget-friendly, easily scalable signage system so they’re not only noticed, but remembered by parkgoers no matter their age, language skills, or interest?",
         research_text_1: "Though this project continued the concept work done by a previous studio cohort, the content strategy team had little to build off of especially when it came to written content. Instead, we started by conducting desktop research and collaborating with the signage form factors team for field research, and studied existing Austin park signage as well as existing SITES-certified park signage across the United States. We were able to identify several pain points to remedy and several successful strategies to implement.",
@@ -31,14 +31,14 @@ export const projects = [
         reflections_text: "This was the most interdependent project I’ve worked on with regards to crossfunctional team collaboration, and I have to say I think we pulled it off well! I really enjoyed not only learning how to define a system like this and design written content alongside visual, but also learning how to work smoothly with so many different teams and moving parts.",
         results_text: "We showcased our final system and prototypes at a presentation attended by over 25 city and Parks stakeholders and placemaking professionals, and passed on our documentation to Austin Parks and Recreation. Our work was received with great excitement, and though it still needs to make it through approval and production, might be seen in Austin parks sometime soon!",
         //case study media
-        research_image_1: "/wkrm/Park_signage_research.jpeg",
-        research_image_2: "/wkrm/Park_signage_framework.jpeg",
-        research_image_3: "/wkrm/Park_signage_content_board.jpeg",
-        process_image_1: "/wkrm/Park_signage_prototypes.JPG",
-        process_image_2: "/wkrm/Park_signage_graphic_design.jpeg",
-        process_left_image: "/wkrm/Park_signage_content_rules.png",
-        process_right_image: "/wkrm/Park_signage_content_spreadsheet.png",
-        product_image: "/wkrm/Park_signage_mockups.jpg",
+        research_image_1: "/wkrm_parks/Park_signage_research.jpeg",
+        research_image_2: "/wkrm_parks/Park_signage_framework.jpeg",
+        research_image_3: "/wkrm_parks/Park_signage_content_board.jpeg",
+        process_image_1: "/wkrm_parks/Park_signage_prototypes.JPG",
+        process_image_2: "/wkrm_parks/Park_signage_graphic_design.jpeg",
+        process_left_image: "/wkrm_parks/Park_signage_content_rules.png",
+        process_right_image: "/wkrm_parks/Park_signage_content_spreadsheet.png",
+        product_image: "/wkrm_parks/Park_signage_mockups.jpg",
         product: "https://sites.google.com/view/sitessignagespecs/home",
         //style stuff
         page_layout: "wide",

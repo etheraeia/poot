@@ -74,9 +74,9 @@ export default function Home() {
             className={`transition-opacity ease-in duration-1000 ${isVisible2 ? "opacity-100" : "opacity-0"}`}
           >
             <CurrentProject
-              title="STERIS Procedural Design System"
-              description="Collecting, auditing, and polishing interface components and patterns to create a design system. This design system ensures visual cohesion within operating room products and reduces workflow friction for designers, devs, and doctors alike."
-              image="medtech.JPG"
+             title="GetThereATX"
+            description="Working with the City of Austin’s Transportation Demand Management (TDM) team under wkrm, a student-run, faculty-led design studio, to reshape how Austinites find transportation information."
+            image="GTATX.jpg"
             />
           </div>
         </div>
